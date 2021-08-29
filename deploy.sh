@@ -91,8 +91,8 @@ main() {
     return 1
   fi
 
-  commit_title=`git log -n 1 --format="%s" HEAD`
-  commit_hash=` git log -n 1 --format="%H" HEAD`
+  commit_title=$(git log -n 1 --format="%s" HEAD)
+  commit_hash=$( git log -n 1 --format="%H" HEAD)
 
   #default commit message uses last title if a custom one is not supplied
   if [[ -z $commit_message ]]; then
@@ -104,7 +104,7 @@ main() {
     commit_message="$commit_message"$'\n\n'"generated from commit $commit_hash"
   fi
 
-  previous_branch=`git rev-parse --abbrev-ref HEAD`
+  previous_branch=$(git rev-parse --abbrev-ref HEAD)
 
   if [ ! -d "$deploy_directory" ]; then
     echo "Deploy directory '$deploy_directory' does not exist. Aborting." >&2
@@ -112,7 +112,7 @@ main() {
   fi
 
   # must use short form of flag in ls for compatibility with macOS and BSD
-  if [[ -z `ls -A "$deploy_directory" 2> /dev/null` && -z $allow_empty ]]; then
+  if [[ -z $(ls -A "$deploy_directory" 2> /dev/null) && -z $allow_empty ]]; then
     echo "Deploy directory '$deploy_directory' is empty. Aborting. If you're sure you want to deploy an empty tree, use the --allow-empty / -e flag." >&2
     return 1
   fi
@@ -154,8 +154,8 @@ incremental_deploy() {
     0) echo No changes to files in $deploy_directory. Skipping commit.;;
     1) commit+push;;
     *)
-      echo git diff exited with code $diff. Aborting. Staying on branch $deploy_branch so you can debug. To switch back to main, use: git symbolic-ref HEAD refs/heads/main && git reset --mixed >&2
-      return $diff
+      echo git diff exited with code "$diff". Aborting. Staying on branch $deploy_branch so you can debug. To switch back to main, use: git symbolic-ref HEAD refs/heads/main && git reset --mixed >&2
+      return "$diff"
       ;;
   esac
 }
@@ -187,10 +187,10 @@ disable_expanded_output() {
 }
 
 set_user_id() {
-  if [[ -z `git config user.name` ]]; then
+  if [[ -z $(git config user.name) ]]; then
     git config user.name "$default_username"
   fi
-  if [[ -z `git config user.email` ]]; then
+  if [[ -z $(git config user.email) ]]; then
     git config user.email "$default_email"
   fi
 }

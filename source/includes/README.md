@@ -1,6 +1,10 @@
-# Royal Design & Rum21
+# Royal web
 
 This package contains the main code for the Royal Design website/React app. It is based on [Create React App](https://github.com/facebookincubator/create-react-app) but is using a custom fork of the `react-scripts` package, found in this monorepo.
+
+## projects
+[Github](https://github.com/Royal-Design-Group/royal-web)
+[Bitbucket](https://bitbucket.org/grebban/royal-web/src/develop/)
 ## Setup
 
 Make sure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
@@ -114,7 +118,7 @@ As a safety precaution deploying the release to the live environment is done by 
 
 ## Updating react-scripts fork
 
-```
+```shell
 # check out create-react-app repo
 $ git clone git@github.com:facebookincubator/create-react-app.git
 $ cd create-react-app
@@ -136,7 +140,7 @@ $ git remote add react-scripts-origin ../create-react-app
 $ git subtree pull -P packages/react-scripts react-scripts-origin react-scripts-v1.0.17 --squash
 ```
 
-For more info, check out https://gist.github.com/alfredringstad/ac0f7a1e081e9ee485e653b6a8351212
+For more info, check out [this gist](https://gist.github.com/alfredringstad/ac0f7a1e081e9ee485e653b6a8351212)
 
 ## Development
 
@@ -304,8 +308,8 @@ Runs lint on all translations specified in `translations.locales` of `config.jso
 
 ### `yarn run`
 
-will give you an overview of all available commands.
-`Which command would you like to run?:`
+will give you an overview of the available commands.
+> Which command would you like to run?
 
 ## Styling
 
@@ -378,7 +382,7 @@ To reduce the number of requests to the server, importing images that are less t
 
 Here is an example:
 
-```jsx
+```javascript
 import React from 'react';
 import logo from './logo.png'; // Tell Webpack this JS file uses this image
 
@@ -438,7 +442,7 @@ When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` wi
 
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
-```jsx
+```javascript
 render() {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
@@ -471,7 +475,7 @@ When you include a script in the HTML file that defines global variables and try
 
 You can avoid this by reading the global variable explicitly from the `window` object, for example:
 
-```jsx
+```javascript
 const $ = window.$;
 ```
 
@@ -483,9 +487,10 @@ Alternatively, you can force the linter to ignore any line by adding `// eslint-
 
 > Note: this feature is available with `react-scripts@0.4.0` and higher.
 
+
 You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using [the "proxy" feature](#proxying-api-requests-in-development) to proxy requests to an API server when that API server is itself serving HTTPS.
 
-To do this, set the `HTTPS` environment variable to `true`, then start the dev server as usual with `npm start`:
+To do this, set the `HTTPS` environment variable to `true`, then start the dev server as usual with `npm start`
 
 #### Windows (cmd.exe)
 
@@ -549,7 +554,7 @@ To create tests, add `it()` (or `test()`) blocks with the name of the test and i
 
 Jest provides a built-in `expect()` global function for making assertions. A basic test could look like this:
 
-```jsx
+```javascript
 import sum from './sum';
 
 it('sums numbers', () => {
@@ -567,7 +572,7 @@ There is a broad spectrum of component testing techniques. They range from a “
 
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
-```jsx
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -600,7 +605,7 @@ The adapter will also need to be configured in your [global setup file](#initial
 
 #### `src/setupTests.js`
 
-```jsx
+```javascript
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -609,7 +614,7 @@ configure({ adapter: new Adapter() });
 
 Now you can write a smoke test with it:
 
-```jsx
+```javascript
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
@@ -625,7 +630,7 @@ You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testi
 
 Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
 
-```jsx
+```javascript
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
@@ -643,7 +648,7 @@ Nevertheless you can use a third-party assertion library like [Chai](http://chai
 
 Additionally, you might find [jest-enzyme](https://github.com/blainekasten/enzyme-matchers) helpful to simplify your tests with readable matchers. The above `contains` code can be written simpler with jest-enzyme.
 
-```jsx
+```javascript
 expect(wrapper).toContainReact(welcome);
 ```
 
@@ -661,7 +666,7 @@ yarn add jest-enzyme
 
 Import it in [`src/setupTests.js`](#initializing-test-environment) to make its matchers available in every test:
 
-```jsx
+```javascript
 import 'jest-enzyme';
 ```
 
@@ -671,7 +676,7 @@ We recommend that you use `expect()` for assertions and `jest.fn()` for spies. I
 
 However, if you are used to other libraries, such as [Chai](http://chaijs.com/) and [Sinon](http://sinonjs.org/), or if you have existing code using them that you’d like to port over, you can import them normally like this:
 
-```jsx
+```javascript
 import sinon from 'sinon';
 import { expect } from 'chai';
 ```
@@ -688,7 +693,7 @@ For example:
 
 #### `src/setupTests.js`
 
-```jsx
+```javascript
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -724,7 +729,7 @@ Supported overrides:
 
 Example package.json:
 
-```jsx
+```javascript
 {
   "name": "your-package",
   "jest": {
@@ -815,7 +820,7 @@ The build command will check for linter warnings and fail if any are found.
 
 By default, the `package.json` of the generated project looks like this:
 
-```jsx
+```javascript
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -896,16 +901,18 @@ npm run analyze
 
 You can adjust various development and production settings by setting environment variables in your shell or with [.env](#adding-development-environment-variables-in-env).
 
-| Variable            |      Development       |     Production     | Usage                                                                       
-| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a [browser](https://github.com/sindresorhus/opn#app) to override this behavior, or set it to `none` to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to `npm start` will also be passed to this script, and the url where your app is served will be the last argument. Your script's file name must have the `.js` extension.                                                                                        |
+| Variable            |      Development       |     Production     | Usage
+| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a [browser](https://github.com/sindresorhus/opn#app) to override this behavior, or set it to `none` to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to `npm start` will also be passed to this script, and the url where your app is served will be the last argument. Your script's file name must have the `.js` extension.|
+
 | HOST                |   :white_check_mark:   |        :x:         | By default, the development web server binds to `localhost`. You may use this variable to specify a different host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | PORT                |   :white_check_mark:   |        :x:         | By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | HTTPS               |   :white_check_mark:   |        :x:         | When set to `true`, Create React App will run the development server in `https` mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | PUBLIC_URL          |          :x:           | :white_check_mark: | Create React App assumes your application is hosted at the serving web server's root or a subpath as specified in [`package.json` (`homepage`)](#building-for-relative-paths). Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.                                                                                                                                                                                                |
 | CI                  | :large_orange_diamond: | :white_check_mark: | When set to `true`, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | REACT_EDITOR        |   :white_check_mark:   |        :x:         | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can [send a pull request to detect your editor of choice](https://github.com/facebookincubator/create-react-app/issues/2636). Setting this environment variable overrides the automatic detection. If you do it, make sure your systems [PATH](<https://en.wikipedia.org/wiki/PATH_(variable)>) environment variable points to your editor’s bin folder. |
+
 | CHOKIDAR_USEPOLLING |   :white_check_mark:   |        :x:         | When set to `true`, the watcher runs in polling mode, as necessary inside a VM. Use this option if `npm start` isn't detecting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to `false`, source maps are not generated for a production build. This solves OOM issues on some smaller machines.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to `false`, source maps are not generated for a production build. This solves OOM issues on some smaller machines. |
 
 ## Troubleshooting
 
@@ -915,11 +922,21 @@ When you save a file while `npm start` is running, the browser should refresh wi
 If this doesn’t happen, try one of the following workarounds:
 
 * If your project is in a Dropbox folder, try moving it out.
-* If the watcher doesn’t see a file called `index.js` and you’re referencing it by the folder name, you [need to restart the watcher](https://github.com/facebookincubator/create-react-app/issues/1164) due to a Webpack bug.
-* Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. Follow the instructions in [“Adjusting Your Text Editor”](https://webpack.js.org/guides/development/#adjusting-your-text-editor).
-* If your project path contains parentheses, try moving the project to a path without them. This is caused by a [Webpack watcher bug](https://github.com/webpack/watchpack/issues/42).
-* On Linux and macOS, you might need to [tweak system settings](https://webpack.github.io/docs/troubleshooting.html#not-enough-watchers) to allow more watchers.
-* If the project runs inside a virtual machine such as (a Vagrant provisioned) VirtualBox, create an `.env` file in your project directory if it doesn’t exist, and add `CHOKIDAR_USEPOLLING=true` to it. This ensures that the next time you run `npm start`, the watcher uses the polling mode, as necessary inside a VM.
+
+* If the watcher doesn’t see a file called `index.js` and you’re referencing it by the folder name, you [need to restart the 
+watcher](https://github.com/facebookincubator/create-react-app/issues/1164) due to a Webpack bug.
+
+* Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. 
+Follow the instructions in [“Adjusting Your Text Editor”](https://webpack.js.org/guides/development/#adjusting-your-text-editor).
+
+* If your project path contains parentheses, try moving the project to a path without them. This is caused by a [Webpack watcher 
+bug](https://github.com/webpack/watchpack/issues/42).
+
+* On Linux and macOS, you might need to [tweak system settings](https://webpack.github.io/docs/troubleshooting.
+html#not-enough-watchers) to allow more watchers.
+
+* If the project runs inside a virtual machine such as (a Vagrant provisioned) VirtualBox, create an `.env` file in your project 
+directory if it doesn’t exist, and add `CHOKIDAR_USEPOLLING=true` to it. This ensures that the next time you run `npm start`, the watcher uses the polling mode, as necessary inside a VM.
 
 If none of these solutions help please leave a comment [in this thread](https://github.com/facebookincubator/create-react-app/issues/659).
 
@@ -971,3 +988,47 @@ To resolve this:
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
 In the future, we might start automatically compiling incompatible third-party modules, but it is not currently supported. This approach would also slow down the production builds.
+
+
+# React scripts
+
+This package includes scripts and configuration used by [Create React App](https://github.com/facebook/create-react-app).<br>
+Please refer to its documentation:
+
+- [Getting Started](https://github.com/facebook/create-react-app/blob/master/README.md#getting-started) – How to create a new app.
+- [User Guide](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md) – How to develop apps bootstrapped with Create React App.
+
+
+# Enviroments
+
+Most secrets and domain specfic values are managed with various .env files 
+in `royal-web/env`
+Env files are used as global variables with domain specific values to control features that are used in some domains
+
+values in these files can be passed into the client side of the applications by using the prefix `REACT_APP`
+
+ex: `REACT_APP_TRUSTPILOT_LINK=https://no.trustpilot.com/`
+
+prod/ = production enviroments
+stage/ = development enviroments
+
+shared enviroment variables (non domain specific) are placed in files named `common`
+
+each application also has a local .env is used for local development the local .env file override the others during development. 
+
+enviroment files found in 
+```shell
+Project root/
+   env/
+      r21/
+         prod/
+         stage/
+
+
+      royaldesign/
+         prod/
+         stage/
+```
+for each domain there is a corresponding .env file in both `prod/` and `stage/`
+
+

@@ -1,4 +1,5 @@
-# 360 image Component found in RoyalDesign
+# 360 image Component
+## 360 image Component found in RoyalDesign
 ### Install
 ThreeSixty is available as NPM package
 ```
@@ -17,7 +18,7 @@ there is also the `Image360.js` file that contains the royaldesign UI implementa
 
 ### Example
 
-```jsx
+```javascript
 const threesixty = new ThreeSixty(document.getElementById('threesixty'), {
   image: 'images/example.jpg',
   count: 19,
@@ -30,7 +31,7 @@ threesixty.play();
 ```
 ### Options
 
-```jsx
+```javascript
 {
   // Source image url
   image: 'images/example.jpg', // Also supports passing an array of images
@@ -61,7 +62,7 @@ threesixty.play();
 
 ### Array of images
 As an alternative to sprite image, ThreeSixty also supports using array of images:
-```jsx
+```javascript
 new ThreeSixty(document.getElementById('threesixty'), {
   image: [
     'images/example-1.jpeg',
@@ -78,13 +79,13 @@ In this case options `count` and `perRow` are ignored.
 ### Methods
 
 Single frame rotation:
-```jsx
+```javascript
 threesixty.next(); 
 threesixty.prev(); 
 ```
 
 Focus *n-th* frame:
-```jsx
+```javascript
 threesixty.goto(index);
 
 threesixty.goto(0); // Reset position
@@ -93,7 +94,7 @@ threesixty.goto(-1); // Focus last frame
 ```
 
 Image rotation:
-```jsx
+```javascript
 // Start rotation
 threesixty.play();
 
@@ -108,6 +109,6 @@ threesixty.toggle();
 ```
 
 Clean up registered events:
-```jsx
+```javascript
 threesixty.destroy();
 ```
