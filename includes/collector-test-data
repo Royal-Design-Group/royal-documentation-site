@@ -1,19 +1,22 @@
-<h1 id='testkop-med-collector'>Testköp med Collector:</h1><h2 id='i-stage-miljoer'>I stage miljöer</h2>
+<h1 id='collector'>Collector</h1><h2 id='i-stage-miljoer'>I stage miljöer</h2>
 <p>Postnummer:  53431
 Collector:</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>E-post:             test.user@royaldesign.com
-MobilNummer         +4612233123
-</code></pre></div>
-<p><strong>bold</strong> Sen klickar du på &quot;Fortsätt utan&quot; <strong>bold</strong></p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>Förnamn                Approved16
+
+<p>E-post:             test.user@royaldesign.com
+MobilNummer         +4612233123</p>
+
+<p>Sen klickar du på &quot;Fortsätt utan&quot; </p>
+
+<p>Förnamn                Approved16
 Efternamn           Sweden16
 Adress              MELLANGATAN 3
-PostNummer          53431
-Ort                 Vara
-</code></pre></div>
-<p><strong>bold</strong> Sen klickar du på knappen &quot;Spara&quot; och väljer &quot;Kort&quot; betalning <strong>bold</strong></p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>Kortnummer          4571999400007492
+PostNummer        53431
+Ort                 Vara</p>
+
+<p>Sen klickar du på knappen &quot;Spara&quot; och väljer &quot;Kort&quot; betalning</p>
+
+<p>Kortnummer          4571999400007492
 utgångsdatum       12/22
-Verifieringskod     150
-</code></pre></div>
-<p><strong>italic</strong> Det borde dyka upp en triangel med utropstecken på höger sidan av kortnummer som informerar om att detta är ett testköp <strong>italic</strong></p>
+Verifieringskod     150</p>
+
+<p>Det borde dyka upp en triangel med utropstecken på höger sidan av kortnummer som informerar om att detta är ett testköp </p>

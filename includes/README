@@ -1,5 +1,8 @@
-<h1 id='royal-design-amp-rum21'>Royal Design &amp; Rum21</h1>
+<h1 id='royal-web'>Royal web</h1>
 <p>This package contains the main code for the Royal Design website/React app. It is based on <a href="https://github.com/facebookincubator/create-react-app">Create React App</a> but is using a custom fork of the <code>react-scripts</code> package, found in this monorepo.</p>
+<h2 id='projects'>projects</h2>
+<p><a href="https://github.com/Royal-Design-Group/royal-web">Github</a>
+<a href="https://bitbucket.org/grebban/royal-web/src/develop/">Bitbucket</a></p>
 <h2 id='setup'>Setup</h2>
 <p>Make sure you have <a href="https://yarnpkg.com/en/docs/install">yarn</a> installed.</p>
 
@@ -52,53 +55,80 @@ https://royalweb-&quot;LOCALE&quot;-stage.azurewebsites.net - LOCALE being the o
 
 <p>As a safety precaution deploying the release to the live environment is done by manually approving a release (just a click in VSTS given that you have the correct credentials). And they will end up on these URLs:</p>
 <h3 id='royaldesign'>royaldesign</h3>
-<p>&quot;Deployment Group Prod Prio&quot;
-  &quot;Royal SE&quot; - https://royalweb-se-prod-deploy.azurewebsites.net&quot;
-  &quot;Royal FI&quot; - https://royalweb-fi-prod-deploy.azurewebsites.net
-  &quot;Royal NO&quot; - https://royalweb-no-prod-deploy.azurewebsites.net
-  &quot;Royal DK&quot; - https://royalweb-dk-prod-deploy.azurewebsites.net</p>
+<p>Royal SE - 
+  https://royalweb-se-prod-deploy.azurewebsites.net</p>
 
-<p>&quot;Deployment Group Prod Other&quot;
-  &quot;Royal DE&quot; - https://royalweb-de-prod-deploy.azurewebsites.net
-  &quot;Royal JP&quot; - https://royalweb-jp-prod-deploy.azurewebsites.net
-  &quot;Royal UK&quot; - https://royalweb-uk-prod-deploy.azurewebsites.net
-  &quot;Royal KR&quot; - https://royalweb-kr-prod-deploy.azurewebsites.net</p>
+<p>Royal FI - 
+  https://royalweb-fi-prod-deploy.azurewebsites.net</p>
 
-<p>&quot;Deployment Group Prod .com&quot;
-  &quot;Royal CH&quot; - https://royalweb-ch-prod-deploy.azurewebsites.net
-  &quot;Royal US&quot; - https://royalweb-us-prod-deploy.azurewebsites.net
-  &quot;Royal EU&quot; - https://royalweb-eu-prod-deploy.azurewebsites.net
-  &quot;Royal AU&quot; - https://royalweb-au-prod-deploy.azurewebsites.net
-  &quot;Royal AT&quot; - https://royalweb-at-prod-deploy.azurewebsites.net</p>
+<p>Royal NO - 
+  https://royalweb-no-prod-deploy.azurewebsites.net</p>
 
-<p>&quot;Deployment Group Prod NL&quot;
-  &quot;Royal NL&quot; - https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net</p>
+<p>Royal DK - 
+  https://royalweb-dk-prod-deploy.azurewebsites.net</p>
+
+<p>Royal DE - 
+  https://royalweb-de-prod-deploy.azurewebsites.net</p>
+
+<p>Royal JP - 
+  https://royalweb-jp-prod-deploy.azurewebsites.net</p>
+
+<p>Royal UK - 
+  https://royalweb-uk-prod-deploy.azurewebsites.net</p>
+
+<p>Royal KR - 
+  https://royalweb-kr-prod-deploy.azurewebsites.net</p>
+
+<p>Royal CH - 
+  https://royalweb-ch-prod-deploy.azurewebsites.net</p>
+
+<p>Royal US - 
+  https://royalweb-us-prod-deploy.azurewebsites.net</p>
+
+<p>Royal EU - 
+  https://royalweb-eu-prod-deploy.azurewebsites.net</p>
+
+<p>Royal AU - 
+  https://royalweb-au-prod-deploy.azurewebsites.net</p>
+
+<p>Royal AT - 
+  https://royalweb-at-prod-deploy.azurewebsites.net</p>
+
+<p>Royal NL - 
+  https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net</p>
 <h3 id='rum21'>rum21</h3>
-<p>&quot;Rum21 SE&quot; - https://r21web-se-prod-deploy.azurewebsites.net
-  &quot;Rum21 NO&quot; - https://r21web-no-prod-deploy.azurewebsites.net
-  &quot;Rum21 FI&quot; - https://r21web-fi-prod-deploy.azurewebsites.net
-  &quot;Rum21 DK&quot; - https://r21web-dk-prod-deploy.azurewebsites.net</p>
-<h1 id='housekeeping'>Housekeeping</h1><h2 id='updating-react-scripts-fork'>Updating react-scripts fork</h2><div class="highlight"><pre class="highlight plaintext"><code># check out create-react-app repo
-$ git clone git@github.com:facebookincubator/create-react-app.git
-$ cd create-react-app
+<p>Rum21 SE - 
+  https://r21web-se-prod-deploy.azurewebsites.net</p>
 
-# checkout the branch/tag you want to update to
-$ git checkout v1.0.17
+<p>Rum21 NO - 
+  https://r21web-no-prod-deploy.azurewebsites.net</p>
 
-# make subtree split to get a branch called react-scripts-v1.0.17 containing
-# only the react-scripts package
-$ git subtree split -P packages/react-scripts -b react-scripts-v1.0.17
+<p>Rum21 FI - 
+  https://r21web-fi-prod-deploy.azurewebsites.net</p>
 
-# go to royal-web repo
-$ cd ../royal-web
+<p>Rum21 DK - 
+  https://r21web-dk-prod-deploy.azurewebsites.net</p>
+<h1 id='housekeeping'>Housekeeping</h1><h2 id='updating-react-scripts-fork'>Updating react-scripts fork</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># check out create-react-app repo</span>
+<span class="nv">$ </span>git clone git@github.com:facebookincubator/create-react-app.git
+<span class="nv">$ </span><span class="nb">cd </span>create-react-app
 
-# add our create-react-app clone as a new remote. you only need to do this the first time
-$ git remote add react-scripts-origin ../create-react-app
+<span class="c"># checkout the branch/tag you want to update to</span>
+<span class="nv">$ </span>git checkout v1.0.17
 
-# merge the changes made to react-scripts origin
-$ git subtree pull -P packages/react-scripts react-scripts-origin react-scripts-v1.0.17 --squash
+<span class="c"># make subtree split to get a branch called react-scripts-v1.0.17 containing</span>
+<span class="c"># only the react-scripts package</span>
+<span class="nv">$ </span>git subtree <span class="nb">split</span> <span class="nt">-P</span> packages/react-scripts <span class="nt">-b</span> react-scripts-v1.0.17
+
+<span class="c"># go to royal-web repo</span>
+<span class="nv">$ </span><span class="nb">cd</span> ../royal-web
+
+<span class="c"># add our create-react-app clone as a new remote. you only need to do this the first time</span>
+<span class="nv">$ </span>git remote add react-scripts-origin ../create-react-app
+
+<span class="c"># merge the changes made to react-scripts origin</span>
+<span class="nv">$ </span>git subtree pull <span class="nt">-P</span> packages/react-scripts react-scripts-origin react-scripts-v1.0.17 <span class="nt">--squash</span>
 </code></pre></div>
-<p>For more info, check out https://gist.github.com/alfredringstad/ac0f7a1e081e9ee485e653b6a8351212</p>
+<p>For more info, check out <a href="https://gist.github.com/alfredringstad/ac0f7a1e081e9ee485e653b6a8351212">this gist</a></p>
 <h2 id='development'>Development</h2><h3 id='start-dev-server'>Start dev server</h3>
 <p>Launch the dev server by following instructions in the README found in the monorepo root, or open a terminal in this folder and run
 <code>yarn start</code></p>
@@ -139,33 +169,33 @@ $ git subtree pull -P packages/react-scripts react-scripts-origin react-scripts-
 <p>Contains dependency list as well as available yarn/npm commands. Handles versioning of other packages in this repo, meaning we could update the fork of react-scripts and add new features, but still pin the dependency to an older version if we&#39;d like.</p>
 <h4 id='public'>public/</h4>
 <p>Contains assets that are made statically available from the express server. Normally, you would not touch these files or add images/stylesheets/js-files here, but instead import these in files used in <code>src/</code>. Sometimes, however, this is necessary.</p>
-<h5 id='index-html'>index.html</h5>
+<h4 id='index-html'>index.html</h4>
 <p>Main HTML template for the site. Needs to contain an element with the id <code>root</code> in order for the React app to mount correctly.</p>
-<h5 id='facicon-ico'>facicon.ico</h5>
+<h4 id='facicon-ico'>facicon.ico</h4>
 <p>Favicon for the site.</p>
-<h5 id='manifest-json'>manifest.json</h5>
+<h4 id='manifest-json'>manifest.json</h4>
 <p>Web manifest used mainly on mobile phones when saving the app to the home screen (progressive web app).</p>
 <h4 id='src'>src/</h4>
 <p>Contains all source code for the React app.</p>
-<h5 id='components'>components/</h5>
+<h4 id='components'>components/</h4>
 <p>Contains all React components used in the app.</p>
-<h6 id='ui'>UI/</h6>
+<h5 id='ui'>UI/</h5>
 <p>Contains shared UI components (buttons, headers, paragraphs etc)</p>
-<h6 id='app-js'>App.js</h6>
+<h5 id='app-js'>App.js</h5>
 <p>Entry point for React.</p>
-<h5 id='lib'>lib/</h5>
+<h4 id='lib'>lib/</h4>
 <p>Helper files/API abstractions etc.</p>
-<h5 id='store'>store/</h5>
+<h4 id='store'>store/</h4>
 <p>Reducers and store files used with Redux.</p>
-<h5 id='actions'>actions/</h5>
+<h4 id='actions'>actions/</h4>
 <p>Action creators used with Redux.</p>
-<h5 id='index-js'>index.js</h5>
+<h4 id='index-js'>index.js</h4>
 <p>Main entry file. Renders <App> component with the correct rendering method on client and server.</p>
-<h5 id='client-js'>client.js</h5>
+<h4 id='client-js'>client.js</h4>
 <p>Exports rendering function used in browser. Can be used to import code that should only be run on the client (e.g. service worker registration).</p>
-<h5 id='server-js'>server.js</h5>
+<h4 id='server-js'>server.js</h4>
 <p>Exports rendering function used in server. Receives the template (index.html) and <code>react-loadable</code> stats from the wrapper around the <code>serve</code> command. Is used as an express middleware.</p>
-<h5 id='constants-js'>constants.js</h5>
+<h4 id='constants-js'>constants.js</h4>
 <p>Constants used within the app.</p>
 <h2 id='available-scripts'>Available Scripts</h2>
 <p>In the project directory, you can run:</p>
@@ -197,8 +227,11 @@ Your app is ready to be deployed!</p>
 <h4 id='yarn-translations-lint'><code>yarn translations lint</code></h4>
 <p>Runs lint on all translations specified in <code>translations.locales</code> of <code>config.json</code> and shows any errors or warnings.</p>
 <h3 id='yarn-run'><code>yarn run</code></h3>
-<p>will give you an overview of all available commands.
-<code>Which command would you like to run?:</code></p>
+<p>will give you an overview of the available commands.</p>
+
+<blockquote>
+<p>Which command would you like to run?</p>
+</blockquote>
 <h2 id='styling'>Styling</h2>
 <p>This project includes some packages to assist with styling components.</p>
 <h3 id='css-in-js'>CSS-in-JS</h3>
@@ -260,14 +293,14 @@ In addition to <a href="https://github.com/lukehoban/es6features">ES6</a> syntax
 <p>To reduce the number of requests to the server, importing images that are less than 10,000 bytes returns a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a> instead of a path. This applies to the following file extensions: bmp, gif, jpg, jpeg, and png. SVG files are excluded due to <a href="https://github.com/facebookincubator/create-react-app/issues/1153">#1153</a>.</p>
 
 <p>Here is an example:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.png</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Tell Webpack this JS file uses this image</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">logo</span><span class="p">);</span> <span class="c1">// /logo.84287d09.png</span>
 
 <span class="kd">function</span> <span class="nx">Header</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// Import result is the URL of your image</span>
-  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">logo</span><span class="si">}</span> <span class="na">alt</span><span class="p">=</span><span class="s">"Logo"</span> <span class="p">/&gt;;</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">logo</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="dl">"</span><span class="s2">Logo</span><span class="dl">"</span> <span class="o">/&gt;</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">Header</span><span class="p">;</span>
@@ -312,12 +345,12 @@ This mechanism provides a number of benefits:</p>
 <p>When you run <code>npm run build</code>, Create React App will substitute <code>%PUBLIC_URL%</code> with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL.</p>
 
 <p>In JavaScript code, you can use <code>process.env.PUBLIC_URL</code> for similar purposes:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// Note: this is an escape hatch and should be used sparingly!</span>
   <span class="c1">// Normally we recommend using `import` for getting asset URLs</span>
   <span class="c1">// as described in “Adding Images and Fonts” above this section.</span>
-  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PUBLIC_URL</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/img/logo.png</span><span class="dl">'</span><span class="si">}</span> <span class="p">/&gt;;</span>
-<span class="p">}</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PUBLIC_URL</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/img/logo.png</span><span class="dl">'</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">;
+</span><span class="p">}</span>
 </code></pre></div>
 <p>Keep in mind the downsides of this approach:</p>
 
@@ -342,7 +375,7 @@ The <code>public</code> folder is useful as a workaround for a number of less co
 <p>When you include a script in the HTML file that defines global variables and try to use one of these variables in the code, the linter will complain because it cannot see the definition of the variable.</p>
 
 <p>You can avoid this by reading the global variable explicitly from the <code>window</code> object, for example:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="kd">const</span> <span class="nx">$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">$</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">$</span><span class="p">;</span>
 </code></pre></div>
 <p>This makes it obvious you are using a global variable intentionally rather than because of a typo.</p>
 
@@ -354,7 +387,7 @@ The <code>public</code> folder is useful as a workaround for a number of less co
 
 <p>You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using <a href="#proxying-api-requests-in-development">the &quot;proxy&quot; feature</a> to proxy requests to an API server when that API server is itself serving HTTPS.</p>
 
-<p>To do this, set the <code>HTTPS</code> environment variable to <code>true</code>, then start the dev server as usual with <code>npm start</code>:</p>
+<p>To do this, set the <code>HTTPS</code> environment variable to <code>true</code>, then start the dev server as usual with <code>npm start</code></p>
 <h4 id='windows-cmd-exe'>Windows (cmd.exe)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span><span class="nv">HTTPS</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm start
 </code></pre></div>
 <p>(Note: the lack of whitespace is intentional.)</p>
@@ -401,7 +434,7 @@ The <code>public</code> folder is useful as a workaround for a number of less co
 <p>To create tests, add <code>it()</code> (or <code>test()</code>) blocks with the name of the test and its code. You may optionally wrap them in <code>describe()</code> blocks for logical grouping but this is neither required nor recommended.</p>
 
 <p>Jest provides a built-in <code>expect()</code> global function for making assertions. A basic test could look like this:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">sum</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./sum</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">sum</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./sum</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">sums numbers</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
@@ -414,13 +447,13 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the output, to full rendering and testing component lifecycle and state changes.</p>
 
 <p>Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders without crashing</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
-  <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span> <span class="nx">div</span><span class="p">);</span>
+  <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">div</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot value with very little effort so they are great as a starting point, and this is the test you will find in <code>src/App.test.js</code>.</p>
@@ -436,18 +469,18 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>As of Enzyme 3, you will need to install Enzyme along with an Adapter corresponding to the version of React you are using. (The examples above use the adapter for React 16.)</p>
 
 <p>The adapter will also need to be configured in your <a href="#initializing-test-environment">global setup file</a>:</p>
-<h4 id='src-setuptests-js'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
+<h4 id='src-setuptests-js'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">Adapter</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme-adapter-react-16</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">configure</span><span class="p">({</span> <span class="na">adapter</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Adapter</span><span class="p">()</span> <span class="p">});</span>
 </code></pre></div>
 <p>Now you can write a smoke test with it:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">shallow</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders without crashing</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">shallow</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;);</span>
+  <span class="nx">shallow</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>Unlike the previous smoke test using <code>ReactDOM.render()</code>, this test only renders <code>&lt;App&gt;</code> and doesn’t go deeper. For example, even if <code>&lt;App&gt;</code> itself renders a <code>&lt;Button&gt;</code> that throws, this test will pass. Shallow rendering is great for isolated unit tests, but you may still want to create some full rendering tests to ensure the components integrate correctly. Enzyme supports <a href="http://airbnb.io/enzyme/docs/api/mount.html">full rendering with <code>mount()</code></a>, and you can also use it for testing state changes and component lifecycle.</p>
@@ -455,14 +488,14 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>You can read the <a href="http://airbnb.io/enzyme/">Enzyme documentation</a> for more testing techniques. Enzyme documentation uses Chai and Sinon for assertions but you don’t have to use them because Jest provides built-in <code>expect()</code> and <code>jest.fn()</code> for spies.</p>
 
 <p>Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">shallow</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders welcome message</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">shallow</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;);</span>
-  <span class="kd">const</span> <span class="nx">welcome</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome to React<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;;</span>
-  <span class="c1">// expect(wrapper.contains(welcome)).to.equal(true);</span>
+  <span class="kd">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">shallow</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">welcome</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">React</span><span class="o">&lt;</span><span class="sr">/h2&gt;</span><span class="err">;
+</span>  <span class="c1">// expect(wrapper.contains(welcome)).to.equal(true);</span>
   <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">welcome</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
@@ -470,7 +503,7 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 Nevertheless you can use a third-party assertion library like <a href="http://chaijs.com/">Chai</a> if you want to, as described below.</p>
 
 <p>Additionally, you might find <a href="https://github.com/blainekasten/enzyme-matchers">jest-enzyme</a> helpful to simplify your tests with readable matchers. The above <code>contains</code> code can be written simpler with jest-enzyme.</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">).</span><span class="nx">toContainReact</span><span class="p">(</span><span class="nx">welcome</span><span class="p">);</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">).</span><span class="nx">toContainReact</span><span class="p">(</span><span class="nx">welcome</span><span class="p">);</span>
 </code></pre></div>
 <p>To enable this, install <code>jest-enzyme</code>:</p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>npm <span class="nb">install</span> <span class="nt">--save</span> jest-enzyme
@@ -479,12 +512,12 @@ Nevertheless you can use a third-party assertion library like <a href="http://ch
 <div class="highlight"><pre class="highlight shell tab-shell"><code>yarn add jest-enzyme
 </code></pre></div>
 <p>Import it in <a href="#initializing-test-environment"><code>src/setupTests.js</code></a> to make its matchers available in every test:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">jest-enzyme</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">jest-enzyme</span><span class="dl">'</span><span class="p">;</span>
 </code></pre></div><h3 id='using-third-party-assertion-libraries'>Using Third Party Assertion Libraries</h3>
 <p>We recommend that you use <code>expect()</code> for assertions and <code>jest.fn()</code> for spies. If you are having issues with them please <a href="https://github.com/facebook/jest/issues/new">file those against Jest</a>, and we’ll fix them. We intend to keep making them better for React, supporting, for example, <a href="https://github.com/facebook/jest/pull/1566">pretty-printing React elements as JSX</a>.</p>
 
 <p>However, if you are used to other libraries, such as <a href="http://chaijs.com/">Chai</a> and <a href="http://sinonjs.org/">Sinon</a>, or if you have existing code using them that you’d like to port over, you can import them normally like this:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">sinon</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">sinon</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">sinon</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">sinon</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">expect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">chai</span><span class="dl">'</span><span class="p">;</span>
 </code></pre></div>
 <p>and then use them in your tests like you normally do.</p>
@@ -496,7 +529,7 @@ Nevertheless you can use a third-party assertion library like <a href="http://ch
 <p>If your app uses a browser API that you need to mock in your tests or if you just need a global setup before running your tests, add a <code>src/setupTests.js</code> to your project. It will be automatically executed before running your tests.</p>
 
 <p>For example:</p>
-<h4 id='src-setuptests-js-2'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="kd">const</span> <span class="nx">localStorageMock</span> <span class="o">=</span> <span class="p">{</span>
+<h4 id='src-setuptests-js-2'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">localStorageMock</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">getItem</span><span class="p">:</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">(),</span>
   <span class="na">setItem</span><span class="p">:</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">(),</span>
   <span class="na">clear</span><span class="p">:</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">()</span>
@@ -525,7 +558,7 @@ Run <code>npm test -- --coverage</code> (note extra <code>--</code> in the middl
 </ul>
 
 <p>Example package.json:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">your-package</span><span class="dl">"</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">jest</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
     <span class="dl">"</span><span class="s2">collectCoverageFrom</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
@@ -572,11 +605,11 @@ script:
 </ol>
 <h4 id='circleci'>CircleCI</h4>
 <p>Follow <a href="https://medium.com/@knowbody/circleci-and-zeits-now-sh-c9b7eebcd3c1">this article</a> to set up CircleCI with a Create React App project.</p>
-<h3 id='on-your-own-environment'>On your own environment</h3><h5 id='windows-cmd-exe-2'>Windows (cmd.exe)</h5><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span><span class="nv">CI</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm <span class="nb">test</span>
+<h3 id='on-your-own-environment'>On your own environment</h3><h4 id='windows-cmd-exe-2'>Windows (cmd.exe)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span><span class="nv">CI</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm <span class="nb">test</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span><span class="nv">CI</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm run build
 </code></pre></div>
 <p>(Note: the lack of whitespace is intentional.)</p>
-<h5 id='linux-macos-bash-2'>Linux, macOS (Bash)</h5><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">CI</span><span class="o">=</span><span class="nb">true </span>npm <span class="nb">test</span>
+<h4 id='linux-macos-bash-2'>Linux, macOS (Bash)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">CI</span><span class="o">=</span><span class="nb">true </span>npm <span class="nb">test</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">CI</span><span class="o">=</span><span class="nb">true </span>npm run build
 </code></pre></div>
 <p>The test command will force Jest to run tests once instead of launching the watcher.</p>
@@ -588,7 +621,7 @@ script:
 <p>The build command will check for linter warnings and fail if any are found.</p>
 <h3 id='disabling-jsdom'>Disabling jsdom</h3>
 <p>By default, the <code>package.json</code> of the generated project looks like this:</p>
-<div class="highlight"><pre class="highlight jsx tab-jsx"><code>  <span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code>  <span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
     <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">react-scripts start</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">build</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">react-scripts build</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">react-scripts test --env=jsdom</span><span class="dl">"</span>
@@ -648,27 +681,34 @@ npm run analyze
 </code></pre></div><h2 id='advanced-configuration'>Advanced Configuration</h2>
 <p>You can adjust various development and production settings by setting environment variables in your shell or with <a href="#adding-development-environment-variables-in-env">.env</a>.</p>
 
-<p>| Variable            |      Development       |     Production     | Usage<br>
-| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.                                                                                        |
-| HOST                |   :white_check_mark:   |        :x:         | By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+<p>| Variable            |      Development       |     Production     | Usage
+| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.|</p>
+
+<p>| HOST                |   :white_check_mark:   |        :x:         | By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | PORT                |   :white_check_mark:   |        :x:         | By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | HTTPS               |   :white_check_mark:   |        :x:         | When set to <code>true</code>, Create React App will run the development server in <code>https</code> mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | PUBLIC_URL          |          :x:           | :white_check_mark: | Create React App assumes your application is hosted at the serving web server&#39;s root or a subpath as specified in <a href="#building-for-relative-paths"><code>package.json</code> (<code>homepage</code>)</a>. Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.                                                                                                                                                                                                |
 | CI                  | :large_orange_diamond: | :white_check_mark: | When set to <code>true</code>, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| REACT_EDITOR        |   :white_check_mark:   |        :x:         | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder. |
-| CHOKIDAR_USEPOLLING |   :white_check_mark:   |        :x:         | When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |</p>
+| REACT_EDITOR        |   :white_check_mark:   |        :x:         | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder. |</p>
+
+<p>| CHOKIDAR_USEPOLLING |   :white_check_mark:   |        :x:         | When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines. |</p>
 <h2 id='troubleshooting'>Troubleshooting</h2><h3 id='npm-start-doesn-t-detect-changes'><code>npm start</code> doesn’t detect changes</h3>
 <p>When you save a file while <code>npm start</code> is running, the browser should refresh with the updated code.<br>
 If this doesn’t happen, try one of the following workarounds:</p>
 
 <ul>
-<li>If your project is in a Dropbox folder, try moving it out.</li>
-<li>If the watcher doesn’t see a file called <code>index.js</code> and you’re referencing it by the folder name, you <a href="https://github.com/facebookincubator/create-react-app/issues/1164">need to restart the watcher</a> due to a Webpack bug.</li>
-<li>Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. Follow the instructions in <a href="https://webpack.js.org/guides/development/#adjusting-your-text-editor">“Adjusting Your Text Editor”</a>.</li>
-<li>If your project path contains parentheses, try moving the project to a path without them. This is caused by a <a href="https://github.com/webpack/watchpack/issues/42">Webpack watcher bug</a>.</li>
-<li>On Linux and macOS, you might need to <a href="https://webpack.github.io/docs/troubleshooting.html#not-enough-watchers">tweak system settings</a> to allow more watchers.</li>
-<li>If the project runs inside a virtual machine such as (a Vagrant provisioned) VirtualBox, create an <code>.env</code> file in your project directory if it doesn’t exist, and add <code>CHOKIDAR_USEPOLLING=true</code> to it. This ensures that the next time you run <code>npm start</code>, the watcher uses the polling mode, as necessary inside a VM.</li>
+<li><p>If your project is in a Dropbox folder, try moving it out.</p></li>
+<li><p>If the watcher doesn’t see a file called <code>index.js</code> and you’re referencing it by the folder name, you <a href="https://github.com/facebookincubator/create-react-app/issues/1164">need to restart the 
+watcher</a> due to a Webpack bug.</p></li>
+<li><p>Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. 
+Follow the instructions in <a href="https://webpack.js.org/guides/development/#adjusting-your-text-editor">“Adjusting Your Text Editor”</a>.</p></li>
+<li><p>If your project path contains parentheses, try moving the project to a path without them. This is caused by a <a href="https://github.com/webpack/watchpack/issues/42">Webpack watcher 
+bug</a>.</p></li>
+<li><p>On Linux and macOS, you might need to <a href="https://webpack.github.io/docs/troubleshooting.
+html#not-enough-watchers">tweak system settings</a> to allow more watchers.</p></li>
+<li><p>If the project runs inside a virtual machine such as (a Vagrant provisioned) VirtualBox, create an <code>.env</code> file in your project 
+directory if it doesn’t exist, and add <code>CHOKIDAR_USEPOLLING=true</code> to it. This ensures that the next time you run <code>npm start</code>, the watcher uses the polling mode, as necessary inside a VM.</p></li>
 </ul>
 
 <p>If none of these solutions help please leave a comment <a href="https://github.com/facebookincubator/create-react-app/issues/659">in this thread</a>.</p>
@@ -721,3 +761,40 @@ To resolve this:</p>
 </ol>
 
 <p>In the future, we might start automatically compiling incompatible third-party modules, but it is not currently supported. This approach would also slow down the production builds.</p>
+<h1 id='react-scripts'>React scripts</h1>
+<p>This package includes scripts and configuration used by <a href="https://github.com/facebook/create-react-app">Create React App</a>.<br>
+Please refer to its documentation:</p>
+
+<ul>
+<li><a href="https://github.com/facebook/create-react-app/blob/master/README.md#getting-started">Getting Started</a> – How to create a new app.</li>
+<li><a href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">User Guide</a> – How to develop apps bootstrapped with Create React App.</li>
+</ul>
+<h1 id='enviroments'>Enviroments</h1>
+<p>Most secrets and domain specfic values are managed with various .env files 
+in <code>royal-web/env</code>
+Env files are used as global variables with domain specific values to control features that are used in some domains</p>
+
+<p>values in these files can be passed into the client side of the applications by using the prefix <code>REACT_APP</code></p>
+
+<p>ex: <code>REACT_APP_TRUSTPILOT_LINK=https://no.trustpilot.com/</code></p>
+
+<p>prod/ = production enviroments
+stage/ = development enviroments</p>
+
+<p>shared enviroment variables (non domain specific) are placed in files named <code>common</code></p>
+
+<p>each application also has a local .env is used for local development the local .env file override the others during development. </p>
+
+<p>enviroment files found in 
+```shell
+Project root/
+   env/
+      r21/
+         prod/
+         stage/</p>
+
+<p>royaldesign/
+         prod/
+         stage/
+``<code>
+for each domain there is a corresponding .env file in both</code>prod/<code>and</code>stage/`</p>

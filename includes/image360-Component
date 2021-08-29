@@ -1,4 +1,4 @@
-<h1 id='360-image-component-found-in-royaldesign'>360 image Component found in RoyalDesign</h1><h3 id='install'>Install</h3>
+<h1 id='360-image-component'>360 image Component</h1><h2 id='360-image-component-found-in-royaldesign'>360 image Component found in RoyalDesign</h2><h3 id='install'>Install</h3>
 <p>ThreeSixty is available as NPM package
 <code>
 npm i @mladenilic/threesixty.js
@@ -13,7 +13,8 @@ npm i @mladenilic/threesixty.js
 in <code>royal-web/packages/royaldesign/src/components/Product/Image360</code>
 there is a pure javascript file <code>threesixty.js</code> that contains the actual code that does the 360 rotation.
 there is also the <code>Image360.js</code> file that contains the royaldesign UI implementation in react</p>
-<h3 id='example'>Example</h3><div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="kd">const</span> <span class="nx">threesixty</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreeSixty</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">threesixty</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
+<h3 id='example'>Example</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+<span class="kd">const</span> <span class="nx">threesixty</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreeSixty</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">threesixty</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
   <span class="na">image</span><span class="p">:</span> <span class="dl">'</span><span class="s1">images/example.jpg</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">count</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
   <span class="na">perRow</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -22,79 +23,74 @@ there is also the <code>Image360.js</code> file that contains the royaldesign UI
 <span class="p">});</span>
 
 <span class="nx">threesixty</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
-</code></pre></div><h3 id='options'>Options</h3><div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="p">{</span>
+</code></pre></div><h3 id='options'>Options</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+<span class="p">{</span>
   <span class="c1">// Source image url</span>
-  <span class="na">image</span><span class="p">:</span> <span class="dl">'</span><span class="s1">images/example.jpg</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Also supports passing an array of images</span>
+  <span class="nl">image</span><span class="p">:</span> <span class="dl">'</span><span class="s1">images/example.jpg</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Also supports passing an array of images</span>
 
   <span class="c1">// Sprite options (If array of images are provided, these options are ignored)</span>
-  <span class="na">count</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>                   <span class="c1">// Total number of images. Default: 0</span>
-  <span class="na">perRow</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>                   <span class="c1">// Number of images per row. Default: 0</span>
+  <span class="nx">count</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>                   <span class="c1">// Total number of images. Default: 0</span>
+  <span class="nx">perRow</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>                   <span class="c1">// Number of images per row. Default: 0</span>
 
   <span class="c1">// Width &amp; Height</span>
-  <span class="na">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>  <span class="c1">// Image width. Default 300</span>
-  <span class="na">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="c1">// Image height. Default 300</span>
+  <span class="nx">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>  <span class="c1">// Image width. Default 300</span>
+  <span class="nx">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="c1">// Image height. Default 300</span>
 
   <span class="c1">// Navigation</span>
-  <span class="na">prev</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">prev</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Previous button element. Default: null</span>
-  <span class="na">next</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">next</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Next button element. Default: null</span>
-  <span class="na">keys</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>         <span class="c1">// Rotate image on arrow keys. Default: true</span>
-  <span class="na">draggable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>    <span class="c1">// Rotate image by dragging. Default: true</span>
-  <span class="na">swipeable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>    <span class="c1">// Rotate image by swiping on mobile screens. Default: true</span>
-  <span class="na">dragTolerance</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// Rotation speed when dragging. Default: 10</span>
-  <span class="na">swipeTolerance</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// Rotation speed when swiping. Default: 10</span>
-  <span class="na">swipeTarget</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">wrapper</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Element which will listen for drag/swipe events. Default: Image container</span>
+  <span class="nx">prev</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">prev</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Previous button element. Default: null</span>
+  <span class="nx">next</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">next</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Next button element. Default: null</span>
+  <span class="nx">keys</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>         <span class="c1">// Rotate image on arrow keys. Default: true</span>
+  <span class="nx">draggable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>    <span class="c1">// Rotate image by dragging. Default: true</span>
+  <span class="nx">swipeable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>    <span class="c1">// Rotate image by swiping on mobile screens. Default: true</span>
+  <span class="nx">dragTolerance</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// Rotation speed when dragging. Default: 10</span>
+  <span class="nx">swipeTolerance</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// Rotation speed when swiping. Default: 10</span>
+  <span class="nx">swipeTarget</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">wrapper</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// Element which will listen for drag/swipe events. Default: Image container</span>
 
   <span class="c1">// Rotation settings</span>
-  <span class="na">speed</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>     <span class="c1">// Rotation speed during 'play' mode. Default: 10</span>
-  <span class="na">inverted</span><span class="p">:</span> <span class="kc">false</span> <span class="c1">// Inverts rotation direction</span>
+  <span class="nx">speed</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>     <span class="c1">// Rotation speed during 'play' mode. Default: 10</span>
+  <span class="nx">inverted</span><span class="p">:</span> <span class="kc">false</span> <span class="c1">// Inverts rotation direction</span>
 <span class="p">}</span>
 </code></pre></div><h3 id='array-of-images'>Array of images</h3>
-<p>As an alternative to sprite image, ThreeSixty also supports using array of images:
-```jsx
-new ThreeSixty(document.getElementById(&#39;threesixty&#39;), {
-  image: [
-    &#39;images/example-1.jpeg&#39;,
-    &#39;images/example-2.jpeg&#39;,
-    &#39;images/example-3.jpeg&#39;,
-    ...
-  ],</p>
+<p>As an alternative to sprite image, ThreeSixty also supports using array of images:</p>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">new</span> <span class="nx">ThreeSixty</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">threesixty</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
+  <span class="na">image</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">'</span><span class="s1">images/example-1.jpeg</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">images/example-2.jpeg</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">images/example-3.jpeg</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">...</span>
+  <span class="p">],</span>
 
-<p>...
-})
-``<code>
-In this case options</code>count<code>and</code>perRow` are ignored.</p>
-<h3 id='methods'>Methods</h3>
-<p>Single frame rotation:
-<code>jsx
-threesixty.next(); 
-threesixty.prev(); 
-</code></p>
+  <span class="p">...</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>In this case options <code>count</code> and <code>perRow</code> are ignored.</p>
+<h3 id='methods'>Methods</h3><h1 id='behover-fixas'>BEHÖVER FIXAS ------</h1>
+<p>Single frame rotation:</p>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">threesixty</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span> 
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">prev</span><span class="p">();</span> 
+</code></pre></div>
+<p>Focus <em>n-th</em> frame:</p>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">threesixty</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
 
-<p>Focus <em>n-th</em> frame:
-```jsx
-threesixty.goto(index);</p>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// Reset position</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Focus 1st frame</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Focus last frame</span>
+</code></pre></div>
+<p>Image rotation:</p>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Start rotation</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
 
-<p>threesixty.goto(0); // Reset position
-threesixty.goto(1); // Focus 1st frame
-threesixty.goto(-1); // Focus last frame
-```</p>
+<span class="c1">// Rotate in oposite direction</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">play</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
-<p>Image rotation:
-```jsx
-// Start rotation
-threesixty.play();</p>
+<span class="c1">// Stop rotation</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
 
-<p>// Rotate in oposite direction
-threesixty.play(true);</p>
-
-<p>// Stop rotation
-threesixty.stop();</p>
-
-<p>// Play/Stop rotation
-threesixty.toggle();
-```</p>
-
+<span class="c1">// Play/Stop rotation</span>
+<span class="nx">threesixty</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+</code></pre></div>
 <p>Clean up registered events:
-<code>jsx
+<code>javascript
 threesixty.destroy();
 </code></p>
+<h1 id='behover-fixas-2'>BEHÖVER FIXAS ------ #</h1>
