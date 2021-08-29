@@ -2,19 +2,20 @@
 title: Documentation royalweb frontend
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell: Bash
-  - javascript: JSX
-  - html: HTML
+  - shell
+  - javascript
+  - html
 
 toc_footers:
+  - <a href='https://github.com/2lach'These docs where</a>
+  - <a href='https://github.com/2lach'>Created by Stefan</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
-  - <a href='https://github.com/2lach' created by Stefan 4 royalweb </a>
 
 includes:
   - README.md
   - meta-tags.md
   - verify-deploys.md
-  - image360-Component.md
+  #- image360-Component.md
   - doc-in-swedish.md
   - collector-test-data.md
   - _errors.md

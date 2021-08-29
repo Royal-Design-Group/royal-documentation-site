@@ -85,34 +85,63 @@ https://royalweb-"LOCALE"-stage.azurewebsites.net - LOCALE being the only change
 
 As a safety precaution deploying the release to the live environment is done by manually approving a release (just a click in VSTS given that you have the correct credentials). And they will end up on these URLs:
 ### royaldesign
- "Deployment Group Prod Prio"
-  "Royal SE" - https://royalweb-se-prod-deploy.azurewebsites.net"
-  "Royal FI" - https://royalweb-fi-prod-deploy.azurewebsites.net
-  "Royal NO" - https://royalweb-no-prod-deploy.azurewebsites.net
-  "Royal DK" - https://royalweb-dk-prod-deploy.azurewebsites.net
 
-"Deployment Group Prod Other"
-  "Royal DE" - https://royalweb-de-prod-deploy.azurewebsites.net
-  "Royal JP" - https://royalweb-jp-prod-deploy.azurewebsites.net
-  "Royal UK" - https://royalweb-uk-prod-deploy.azurewebsites.net
-  "Royal KR" - https://royalweb-kr-prod-deploy.azurewebsites.net
+  Royal SE - 
+  https://royalweb-se-prod-deploy.azurewebsites.net
+  
+  Royal FI - 
+  https://royalweb-fi-prod-deploy.azurewebsites.net
+  
+  Royal NO - 
+  https://royalweb-no-prod-deploy.azurewebsites.net
+  
+  Royal DK - 
+  https://royalweb-dk-prod-deploy.azurewebsites.net
 
-"Deployment Group Prod .com"
-  "Royal CH" - https://royalweb-ch-prod-deploy.azurewebsites.net
-  "Royal US" - https://royalweb-us-prod-deploy.azurewebsites.net
-  "Royal EU" - https://royalweb-eu-prod-deploy.azurewebsites.net
-  "Royal AU" - https://royalweb-au-prod-deploy.azurewebsites.net
-  "Royal AT" - https://royalweb-at-prod-deploy.azurewebsites.net
+  Royal DE - 
+  https://royalweb-de-prod-deploy.azurewebsites.net
+  
+  Royal JP - 
+  https://royalweb-jp-prod-deploy.azurewebsites.net
+  
+  Royal UK - 
+  https://royalweb-uk-prod-deploy.azurewebsites.net
+  
+  Royal KR - 
+  https://royalweb-kr-prod-deploy.azurewebsites.net
 
-"Deployment Group Prod NL"
-  "Royal NL" - https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net
+  Royal CH - 
+  https://royalweb-ch-prod-deploy.azurewebsites.net
+  
+  Royal US - 
+  https://royalweb-us-prod-deploy.azurewebsites.net
+  
+  Royal EU - 
+  https://royalweb-eu-prod-deploy.azurewebsites.net
+  
+  Royal AU - 
+  https://royalweb-au-prod-deploy.azurewebsites.net
+  
+  Royal AT - 
+  https://royalweb-at-prod-deploy.azurewebsites.net
+
+  Royal NL - 
+  https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net
 
 
 ### rum21 
-  "Rum21 SE" - https://r21web-se-prod-deploy.azurewebsites.net
-  "Rum21 NO" - https://r21web-no-prod-deploy.azurewebsites.net
-  "Rum21 FI" - https://r21web-fi-prod-deploy.azurewebsites.net
-  "Rum21 DK" - https://r21web-dk-prod-deploy.azurewebsites.net
+  
+  Rum21 SE - 
+  https://r21web-se-prod-deploy.azurewebsites.net
+  
+  Rum21 NO - 
+  https://r21web-no-prod-deploy.azurewebsites.net
+  
+  Rum21 FI - 
+  https://r21web-fi-prod-deploy.azurewebsites.net
+  
+  Rum21 DK - 
+  https://r21web-dk-prod-deploy.azurewebsites.net
 
 # Housekeeping
 
@@ -205,15 +234,15 @@ Contains dependency list as well as available yarn/npm commands. Handles version
 
 Contains assets that are made statically available from the express server. Normally, you would not touch these files or add images/stylesheets/js-files here, but instead import these in files used in `src/`. Sometimes, however, this is necessary.
 
-##### index.html
+#### index.html
 
 Main HTML template for the site. Needs to contain an element with the id `root` in order for the React app to mount correctly.
 
-##### facicon.ico
+#### facicon.ico
 
 Favicon for the site.
 
-##### manifest.json
+#### manifest.json
 
 Web manifest used mainly on mobile phones when saving the app to the home screen (progressive web app).
 
@@ -221,43 +250,43 @@ Web manifest used mainly on mobile phones when saving the app to the home screen
 
 Contains all source code for the React app.
 
-##### components/
+#### components/
 
 Contains all React components used in the app.
 
-###### UI/
+##### UI/
 
 Contains shared UI components (buttons, headers, paragraphs etc)
 
-###### App.js
+##### App.js
 
 Entry point for React.
 
-##### lib/
+#### lib/
 
 Helper files/API abstractions etc.
 
-##### store/
+#### store/
 
 Reducers and store files used with Redux.
 
-##### actions/
+#### actions/
 
 Action creators used with Redux.
 
-##### index.js
+#### index.js
 
 Main entry file. Renders <App> component with the correct rendering method on client and server.
 
-##### client.js
+#### client.js
 
 Exports rendering function used in browser. Can be used to import code that should only be run on the client (e.g. service worker registration).
 
-##### server.js
+#### server.js
 
 Exports rendering function used in server. Receives the template (index.html) and `react-loadable` stats from the wrapper around the `serve` command. Is used as an express middleware.
 
-##### constants.js
+#### constants.js
 
 Constants used within the app.
 
@@ -788,7 +817,7 @@ Follow [this article](https://medium.com/@knowbody/circleci-and-zeits-now-sh-c9b
 
 ### On your own environment
 
-##### Windows (cmd.exe)
+#### Windows (cmd.exe)
 
 ```shell
 set CI=true&&npm test
@@ -800,7 +829,7 @@ set CI=true&&npm run build
 
 (Note: the lack of whitespace is intentional.)
 
-##### Linux, macOS (Bash)
+#### Linux, macOS (Bash)
 
 ```shell
 CI=true npm test

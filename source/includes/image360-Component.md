@@ -19,6 +19,7 @@ there is also the `Image360.js` file that contains the royaldesign UI implementa
 ### Example
 
 ```javascript
+
 const threesixty = new ThreeSixty(document.getElementById('threesixty'), {
   image: 'images/example.jpg',
   count: 19,
@@ -32,6 +33,7 @@ threesixty.play();
 ### Options
 
 ```javascript
+
 {
   // Source image url
   image: 'images/example.jpg', // Also supports passing an array of images
@@ -62,6 +64,7 @@ threesixty.play();
 
 ### Array of images
 As an alternative to sprite image, ThreeSixty also supports using array of images:
+
 ```javascript
 new ThreeSixty(document.getElementById('threesixty'), {
   image: [
@@ -74,17 +77,23 @@ new ThreeSixty(document.getElementById('threesixty'), {
   ...
 })
 ```
+
 In this case options `count` and `perRow` are ignored.
 
 ### Methods
 
+# BEHÖVER FIXAS ------ #
+
+
 Single frame rotation:
+
 ```javascript
 threesixty.next(); 
 threesixty.prev(); 
 ```
 
 Focus *n-th* frame:
+
 ```javascript
 threesixty.goto(index);
 
@@ -94,6 +103,7 @@ threesixty.goto(-1); // Focus last frame
 ```
 
 Image rotation:
+
 ```javascript
 // Start rotation
 threesixty.play();
@@ -112,3 +122,6 @@ Clean up registered events:
 ```javascript
 threesixty.destroy();
 ```
+
+
+# BEHÖVER FIXAS ------ #  
