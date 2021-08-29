@@ -12,3 +12,4 @@ Which site group do you want to test?
          3) Both
          4) Exit                ...
 ```
+Where you select 1, 2 or 3

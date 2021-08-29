@@ -1,6 +1,6 @@
-# Head
-
-## Tags
+# Meta tags
+## Head
+### Tags
 Site verification tags such as 
 with the syntax `<meta name="X-domain-verification" content="some-string-123" />`
 with different identifiers for each domain lives in:

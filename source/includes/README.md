@@ -4,7 +4,144 @@ This package contains the main code for the Royal Design website/React app. It i
 
 ## Setup
 
-See README in the root of the monorepo.
+# Royal Design
+
+## Setup
+
+Make sure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
+
+Open a terminal and install dependencies:
+
+```shell
+yarn
+```
+
+Change into the royaldesign package folder:
+
+```shell
+cd packages/royaldesign
+```
+
+Run development server:
+
+```shell
+yarn start
+```
+
+Build production client and server bundle:
+
+```shell
+yarn build
+```
+
+Run production server:
+
+```shell
+yarn serve
+```
+
+### Build with a specific locale
+
+By default the build is using the default locale specified in config.json of the royaldesign package root. To override this, set the env-var LOCALE when building for production:
+
+```shell
+LOCALE=en-US yarn build
+```
+
+## Translation flow
+
+If you have added new strings to an application you can extract the strings to the default locale file (sv-SE) using this command:
+
+```shell
+yarn translations extract
+```
+
+If you look at you git diff you should be able to identify any new strings that have been added to the application.
+
+To get them translated we use a Google Drive document to communicate translations with Royal Design. We input the id (the key generated to JSON file, like ange_rabattkod_fa2f75f7) and the swedish string and they will make sure that their resources for translations will fill the rest of the columns. We then manually just add the translations to the other locale files after we have received the translations. If you have a large amount of strings there is an old script somewhere that Niclas Vänström can dig up.
+
+So add any new strings to the sheet for the application and ping Isabelle Blanc in the Royal Design Slack about the fact that we need translations.
+
+Link to the document: https://docs.google.com/spreadsheets/d/1XjzXfH6_d8k9AXVua-9GpHpwDxtzk6Mah8r7Zb5tjAY/
+
+## Adding a new site
+
+When adding a new site there are some steps that you need to go through:
+
+- If you are adding a new currency. Add the format to src/constants/format.js
+- Configure routing in src/lib/routing/config.js
+- Add locale to src/config.json
+- Create a translated locale file (preferably based on sv-SE if possible) and add it to translations/{new_locale}.json
+- Create new env files in the env folder in the root
+
+## CI/CD
+
+There are currently some basic build and release pipelines for the royal-web repository. So whenever you push to a release branch a build based on the file Dockerfile-VSTS will be triggered, if the build is successful it will be automatically deployed to the staging environment which consists of these sites:
+
+https://royalweb-no-stage.azurewebsites.net
+https://royalweb-se-stage.azurewebsites.net
+
+and for the rest of all royaldesign and rum21 domains with the
+https://royalweb-"LOCALE"-stage.azurewebsites.net - LOCALE being the only change
+
+As a safety precaution deploying the release to the live environment is done by manually approving a release (just a click in VSTS given that you have the correct credentials). And they will end up on these URLs:
+### royaldesign
+ "Deployment Group Prod Prio"
+  "Royal SE" - https://royalweb-se-prod-deploy.azurewebsites.net"
+  "Royal FI" - https://royalweb-fi-prod-deploy.azurewebsites.net
+  "Royal NO" - https://royalweb-no-prod-deploy.azurewebsites.net
+  "Royal DK" - https://royalweb-dk-prod-deploy.azurewebsites.net
+
+"Deployment Group Prod Other"
+  "Royal DE" - https://royalweb-de-prod-deploy.azurewebsites.net
+  "Royal JP" - https://royalweb-jp-prod-deploy.azurewebsites.net
+  "Royal UK" - https://royalweb-uk-prod-deploy.azurewebsites.net
+  "Royal KR" - https://royalweb-kr-prod-deploy.azurewebsites.net
+
+"Deployment Group Prod .com"
+  "Royal CH" - https://royalweb-ch-prod-deploy.azurewebsites.net
+  "Royal US" - https://royalweb-us-prod-deploy.azurewebsites.net
+  "Royal EU" - https://royalweb-eu-prod-deploy.azurewebsites.net
+  "Royal AU" - https://royalweb-au-prod-deploy.azurewebsites.net
+  "Royal AT" - https://royalweb-at-prod-deploy.azurewebsites.net
+
+"Deployment Group Prod NL"
+  "Royal NL" - https://royalweb-nl-prod-royalweb-nl-prod-deploy.azurewebsites.net
+
+
+### rum21 
+  "Rum21 SE" - https://r21web-se-prod-deploy.azurewebsites.net
+  "Rum21 NO" - https://r21web-no-prod-deploy.azurewebsites.net
+  "Rum21 FI" - https://r21web-fi-prod-deploy.azurewebsites.net
+  "Rum21 DK" - https://r21web-dk-prod-deploy.azurewebsites.net
+
+# Housekeeping
+
+## Updating react-scripts fork
+
+```
+# check out create-react-app repo
+$ git clone git@github.com:facebookincubator/create-react-app.git
+$ cd create-react-app
+
+# checkout the branch/tag you want to update to
+$ git checkout v1.0.17
+
+# make subtree split to get a branch called react-scripts-v1.0.17 containing
+# only the react-scripts package
+$ git subtree split -P packages/react-scripts -b react-scripts-v1.0.17
+
+# go to royal-web repo
+$ cd ../royal-web
+
+# add our create-react-app clone as a new remote. you only need to do this the first time
+$ git remote add react-scripts-origin ../create-react-app
+
+# merge the changes made to react-scripts origin
+$ git subtree pull -P packages/react-scripts react-scripts-origin react-scripts-v1.0.17 --squash
+```
+
+For more info, check out https://gist.github.com/alfredringstad/ac0f7a1e081e9ee485e653b6a8351212
 
 ## Development
 

@@ -2,12 +2,8 @@
 title: Documentation for the mono-repo royal-web containing the front-end code for RoyalDesign and Rum21
 
 language_tabs: # must be one of https://git.io/vQNgJ
+  - jsx
   - shell
-  - ruby
-  - python
-  - javascript
-  - json
-  - react
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -19,9 +15,10 @@ includes:
   - React-scripts.md
   - meta-tags.md
   - enviroments.md
-  - collector-test-data.md
-  - image360-Component.md
   - verify-deploys.md
+  - image360-Component.md
+  - doc-in-swedish.md
+  - collector-test-data.md
   - _errors.md
 
 
