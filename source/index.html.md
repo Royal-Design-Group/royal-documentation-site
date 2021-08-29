@@ -2,8 +2,9 @@
 title: Documentation for the mono-repo royal-web containing the front-end code for RoyalDesign and Rum21
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - jsx
+  - html
   - shell
+  - jsx
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>

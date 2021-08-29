@@ -1,11 +1,6 @@
-# Royal Design
+# Royal Design & Rum21
 
 This package contains the main code for the Royal Design website/React app. It is based on [Create React App](https://github.com/facebookincubator/create-react-app) but is using a custom fork of the `react-scripts` package, found in this monorepo.
-
-## Setup
-
-# Royal Design
-
 ## Setup
 
 Make sure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
@@ -62,7 +57,7 @@ To get them translated we use a Google Drive document to communicate translation
 
 So add any new strings to the sheet for the application and ping Isabelle Blanc in the Royal Design Slack about the fact that we need translations.
 
-Link to the document: https://docs.google.com/spreadsheets/d/1XjzXfH6_d8k9AXVua-9GpHpwDxtzk6Mah8r7Zb5tjAY/
+[Link to the google spreadsheets](https://docs.google.com/spreadsheets/d/1XjzXfH6_d8k9AXVua-9GpHpwDxtzk6Mah8r7Zb5tjAY/)
 
 ## Adding a new site
 
@@ -383,7 +378,7 @@ To reduce the number of requests to the server, importing images that are less t
 
 Here is an example:
 
-```javascript
+```jsx
 import React from 'react';
 import logo from './logo.png'; // Tell Webpack this JS file uses this image
 
@@ -443,7 +438,7 @@ When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` wi
 
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
-```javascript
+```jsx
 render() {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
@@ -476,7 +471,7 @@ When you include a script in the HTML file that defines global variables and try
 
 You can avoid this by reading the global variable explicitly from the `window` object, for example:
 
-```javascript
+```jsx
 const $ = window.$;
 ```
 
@@ -554,7 +549,7 @@ To create tests, add `it()` (or `test()`) blocks with the name of the test and i
 
 Jest provides a built-in `expect()` global function for making assertions. A basic test could look like this:
 
-```javascript
+```jsx
 import sum from './sum';
 
 it('sums numbers', () => {
@@ -572,7 +567,7 @@ There is a broad spectrum of component testing techniques. They range from a “
 
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
-```javascript
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -605,7 +600,7 @@ The adapter will also need to be configured in your [global setup file](#initial
 
 #### `src/setupTests.js`
 
-```javascript
+```jsx
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -614,7 +609,7 @@ configure({ adapter: new Adapter() });
 
 Now you can write a smoke test with it:
 
-```javascript
+```jsx
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
@@ -630,7 +625,7 @@ You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testi
 
 Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
 
-```javascript
+```jsx
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
@@ -648,7 +643,7 @@ Nevertheless you can use a third-party assertion library like [Chai](http://chai
 
 Additionally, you might find [jest-enzyme](https://github.com/blainekasten/enzyme-matchers) helpful to simplify your tests with readable matchers. The above `contains` code can be written simpler with jest-enzyme.
 
-```javascript
+```jsx
 expect(wrapper).toContainReact(welcome);
 ```
 
@@ -666,7 +661,7 @@ yarn add jest-enzyme
 
 Import it in [`src/setupTests.js`](#initializing-test-environment) to make its matchers available in every test:
 
-```javascript
+```jsx
 import 'jest-enzyme';
 ```
 
@@ -676,7 +671,7 @@ We recommend that you use `expect()` for assertions and `jest.fn()` for spies. I
 
 However, if you are used to other libraries, such as [Chai](http://chaijs.com/) and [Sinon](http://sinonjs.org/), or if you have existing code using them that you’d like to port over, you can import them normally like this:
 
-```javascript
+```jsx
 import sinon from 'sinon';
 import { expect } from 'chai';
 ```
@@ -693,7 +688,7 @@ For example:
 
 #### `src/setupTests.js`
 
-```javascript
+```jsx
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -729,7 +724,7 @@ Supported overrides:
 
 Example package.json:
 
-```javascript
+```jsx
 {
   "name": "your-package",
   "jest": {
@@ -790,11 +785,11 @@ Follow [this article](https://medium.com/@knowbody/circleci-and-zeits-now-sh-c9b
 
 ##### Windows (cmd.exe)
 
-```cmd
+```shell
 set CI=true&&npm test
 ```
 
-```cmd
+```shell
 set CI=true&&npm run build
 ```
 
@@ -820,7 +815,7 @@ The build command will check for linter warnings and fail if any are found.
 
 By default, the `package.json` of the generated project looks like this:
 
-```javascript
+```jsx
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -881,7 +876,7 @@ yarn add source-map-explorer
 
 Then in `package.json`, add the following line to `scripts`:
 
-```javascript
+```diff
    "scripts": {
 +    "analyze": "source-map-explorer build/static/js/main.*",
      "start": "react-scripts start",
