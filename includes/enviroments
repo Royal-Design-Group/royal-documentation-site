@@ -1,0 +1,29 @@
+<h1 id='enviroments'>Enviroments</h1>
+<p>Most secrets and domain specfic values are managed with various .env files 
+in <code>royal-web/env</code>
+Env files are used as global variables with domain specific values to control features that are used in some domains</p>
+
+<p>values in these files can be passed into the client side of the applications by using the prefix <code>REACT_APP</code></p>
+
+<p>ex: <code>REACT_APP_TRUSTPILOT_LINK=https://no.trustpilot.com/</code></p>
+
+<p>prod/ = production enviroments
+stage/ = development enviroments</p>
+
+<p>shared enviroment variables (non domain specific) are placed in files named <code>common</code></p>
+
+<p>each application also has a local .env is used for local development the local .env file override the others during development. </p>
+
+<p>enviroment files found in 
+```shell
+Project root/
+   env/
+      r21/
+         prod/
+         stage/</p>
+
+<p>royaldesign/
+         prod/
+         stage/
+``<code>
+for each domain there is a corresponding .env file in both</code>prod/<code>and</code>stage/`</p>

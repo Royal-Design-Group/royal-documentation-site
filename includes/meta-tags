@@ -1,0 +1,15 @@
+<h1 id='meta-tags'>Meta tags</h1><h2 id='head'>Head</h2><h3 id='tags'>Tags</h3>
+<p>Site verification tags such as 
+with the syntax <code>&lt;meta name=&quot;X-domain-verification&quot; content=&quot;some-string-123&quot; /&gt;</code>
+with different identifiers for each domain lives in:</p>
+
+<p><a href="https://prismic.io/dashboard">Prismic</a> &gt; 
+        (Section type:) Document &gt; 
+             (Document name:) Config or Configuration &gt; 
+                    (Subsection name:) SEO &gt; 
+                        (Slice tab name) Meta tags</p>
+
+<p>exeception from above is when a tag is to be implemented on the domain <link>https://Royaldesign.com</link> which is hardcoded in the project <code>royal-web</code> and then the file:
+<code>royal-web/packages/royaldesign/public/countries.html</code></p>
+<h2 id='google-tag-mananger-gtm'>Google tag mananger - GTM</h2>
+<p>Most scripts related to tracking or external services lives in <a href="https://tagmanager.google.com/">google tag mananger</a> where there is two accounts <code>Dev</code> which is the development enviroment connected to the stage build enviroments and <code>new site</code> which is connected to the production enviroments</p>

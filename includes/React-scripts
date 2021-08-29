@@ -1,0 +1,8 @@
+<h1 id='react-scripts'>React scripts</h1>
+<p>This package includes scripts and configuration used by <a href="https://github.com/facebook/create-react-app">Create React App</a>.<br>
+Please refer to its documentation:</p>
+
+<ul>
+<li><a href="https://github.com/facebook/create-react-app/blob/master/README.md#getting-started">Getting Started</a> – How to create a new app.</li>
+<li><a href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">User Guide</a> – How to develop apps bootstrapped with Create React App.</li>
+</ul>
