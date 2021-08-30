@@ -1,8 +1,9 @@
 <h1 id='introduction'>Introduction</h1>
 <p>This package contains the main code for the Royal Design website/React app. It is based on <a href="https://github.com/facebookincubator/create-react-app">Create React App</a> but is using a custom fork of the <code>react-scripts</code> package, found in this monorepo.</p>
-<h2 id='projects'>projects</h2>
-<p><a href="https://github.com/Royal-Design-Group/royal-web">Github</a>
-<a href="https://bitbucket.org/grebban/royal-web/src/develop/">Bitbucket</a></p>
+<h2 id='project-code'>Project code</h2>
+<p><a href="https://github.com/Royal-Design-Group">Royal design group on Github</a></p>
+
+<p><a href="https://bitbucket.org/grebban/royal-web/src/develop/">Royal web project on Bitbucket</a></p>
 <h2 id='setup'>Setup</h2>
 <p>Make sure you have <a href="https://yarnpkg.com/en/docs/install">yarn</a> installed.</p>
 
@@ -38,20 +39,22 @@
 <p>When adding a new site there are some steps that you need to go through:</p>
 
 <ul>
-<li>If you are adding a new currency. Add the format to src/constants/format.js</li>
-<li>Configure routing in src/lib/routing/config.js</li>
-<li>Add locale to src/config.json</li>
-<li>Create a translated locale file (preferably based on sv-SE if possible) and add it to translations/{new_locale}.json</li>
-<li>Create new env files in the env folder in the root</li>
+<li><p>If you are adding a new currency. Add the format to src/constants/format.js</p></li>
+<li><p>Configure routing in src/lib/routing/config.js</p></li>
+<li><p>Add locale to src/config.json</p></li>
+<li><p>Create a translated locale file (preferably based on sv-SE if possible) and add it to translations/{new_locale}.json</p></li>
+<li><p>Create new env files in the env folder in the root</p></li>
 </ul>
 <h2 id='ci-cd'>CI/CD</h2>
-<p>There are currently some basic build and release pipelines for the royal-web repository. So whenever you push to a release branch a build based on the file Dockerfile-VSTS will be triggered, if the build is successful it will be automatically deployed to the staging environment which consists of these sites:</p>
+<p>There are currently some basic build and release pipelines for the royal-web repository. So whenever you push to a release branch a build based on the file Dockerfile-VSTS will be triggered, if the build is successful it will be automatically deployed to the staging environment which consists of these sites</p>
 
-<p>https://royalweb-no-stage.azurewebsites.net
-https://royalweb-se-stage.azurewebsites.net</p>
+<ul>
+<li>https://royalweb-no-stage.azurewebsites.net</li>
+<li>https://royalweb-se-stage.azurewebsites.net</li>
+</ul>
 
 <p>and for the rest of all royaldesign and rum21 domains with the
-https://royalweb-&quot;LOCALE&quot;-stage.azurewebsites.net - LOCALE being the only change</p>
+<code>https://royalweb-&quot;LOCALE&quot;-stage.azurewebsites.net</code> - <code>LOCALE</code> being the only change depending on the domain you wish to test</p>
 
 <p>As a safety precaution deploying the release to the live environment is done by manually approving a release (just a click in VSTS given that you have the correct credentials). And they will end up on these URLs:</p>
 <h3 id='royaldesign'>royaldesign</h3>
@@ -368,6 +371,10 @@ This mechanism provides a number of benefits:</p>
   <span class="k">return</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PUBLIC_URL</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/img/logo.png</span><span class="dl">'</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>  <span class="p">}</span>
 </code></pre></div>
+<blockquote>
+<p><a href="#adding-images-fonts-and-files">Adding images and fonts</a>.</p>
+</blockquote>
+
 <p>Keep in mind the downsides of this approach:</p>
 
 <ul>
@@ -395,19 +402,20 @@ The <code>public</code> folder is useful as a workaround for a number of less co
 </code></pre></div>
 <p>This makes it obvious you are using a global variable intentionally rather than because of a typo.</p>
 
-<p>Alternatively, you can force the linter to ignore any line by adding <code>// eslint-disable-line</code> after it.</p>
+<p>Alternatively, you can force the linter to ignore any line by adding
+<code>// eslint-disable-line</code> after it.</p>
 <h2 id='using-https-in-development'>Using HTTPS in Development</h2>
-<blockquote>
-<p>Note: this feature is available with <code>react-scripts@0.4.0</code> and higher.</p>
-</blockquote>
+<ul>
+<li>Note: this feature is available with <code>react-scripts@0.4.0</code> and higher.</li>
+</ul>
 
 <p>You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using <a href="#proxying-api-requests-in-development">the &quot;proxy&quot; feature</a> to proxy requests to an API server when that API server is itself serving HTTPS.</p>
 
 <p>To do this, set the <code>HTTPS</code> environment variable to <code>true</code>, then start the dev server as usual with <code>npm start</code></p>
-<h4 id='windows-cmd-exe'>Windows (cmd.exe)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span><span class="nv">HTTPS</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm start
+<h4 id='windows-cmd-exe'>Windows (cmd.exe)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">$ </span><span class="nb">set </span><span class="nv">HTTPS</span><span class="o">=</span><span class="nb">true</span><span class="o">&amp;&amp;</span>npm start
 </code></pre></div>
 <p>(Note: the lack of whitespace is intentional.)</p>
-<h4 id='linux-macos-bash'>Linux, macOS (Bash)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">HTTPS</span><span class="o">=</span><span class="nb">true </span>npm start
+<h4 id='linux-macos-bash'>Linux, macOS (Bash)</h4><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">$ HTTPS</span><span class="o">=</span><span class="nb">true </span>npm start
 </code></pre></div>
 <p>Note that the server will use a self-signed certificate, so your web browser will almost definitely display a warning upon accessing the page.</p>
 <h2 id='running-tests'>Running Tests</h2>
@@ -465,13 +473,13 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the output, to full rendering and testing component lifecycle and state changes.</p>
 
 <p>Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:</p>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders without crashing</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
-  <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">div</span><span class="p">);</span>
+  <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span> <span class="nx">div</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot value with very little effort so they are great as a starting point, and this is the test you will find in <code>src/App.test.js</code>.</p>
@@ -479,26 +487,26 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>When you encounter bugs caused by changing components, you will gain a deeper insight into which parts of them are worth testing in your application. This might be a good time to introduce more specific tests asserting specific expected output or behavior.</p>
 
 <p>If you’d like to test components in isolation from the child components they render, we recommend using <a href="http://airbnb.io/enzyme/docs/api/shallow.html"><code>shallow()</code> rendering API</a> from <a href="http://airbnb.io/enzyme/">Enzyme</a>. To install it, run:</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>npm <span class="nb">install</span> <span class="nt">--save</span> enzyme enzyme-adapter-react-16 react-test-renderer
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save</span> enzyme enzyme-adapter-react-16 react-test-renderer
 </code></pre></div>
 <p>Alternatively you may use <code>yarn</code>:</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>yarn add enzyme enzyme-adapter-react-16 react-test-renderer
+<div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>yarn add enzyme enzyme-adapter-react-16 react-test-renderer
 </code></pre></div>
 <p>As of Enzyme 3, you will need to install Enzyme along with an Adapter corresponding to the version of React you are using. (The examples above use the adapter for React 16.)</p>
 
 <p>The adapter will also need to be configured in your <a href="#initializing-test-environment">global setup file</a>:</p>
-<h4 id='src-setuptests-js'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
+<h4 id='src-setuptests-js'><code>src/setupTests.js</code></h4><div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">Adapter</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme-adapter-react-16</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">configure</span><span class="p">({</span> <span class="na">adapter</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Adapter</span><span class="p">()</span> <span class="p">});</span>
 </code></pre></div>
 <p>Now you can write a smoke test with it:</p>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">shallow</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders without crashing</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">shallow</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
+  <span class="nx">shallow</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>Unlike the previous smoke test using <code>ReactDOM.render()</code>, this test only renders <code>&lt;App&gt;</code> and doesn’t go deeper. For example, even if <code>&lt;App&gt;</code> itself renders a <code>&lt;Button&gt;</code> that throws, this test will pass. Shallow rendering is great for isolated unit tests, but you may still want to create some full rendering tests to ensure the components integrate correctly. Enzyme supports <a href="http://airbnb.io/enzyme/docs/api/mount.html">full rendering with <code>mount()</code></a>, and you can also use it for testing state changes and component lifecycle.</p>
@@ -506,14 +514,14 @@ You can also use <a href="https://facebook.github.io/jest/docs/en/expect.html#to
 <p>You can read the <a href="http://airbnb.io/enzyme/">Enzyme documentation</a> for more testing techniques. Enzyme documentation uses Chai and Sinon for assertions but you don’t have to use them because Jest provides built-in <code>expect()</code> and <code>jest.fn()</code> for spies.</p>
 
 <p>Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:</p>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight jsx tab-jsx"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">shallow</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">enzyme</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">renders welcome message</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">shallow</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
-  <span class="kd">const</span> <span class="nx">welcome</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">React</span><span class="o">&lt;</span><span class="sr">/h2&gt;</span><span class="err">;
-</span>  <span class="c1">// expect(wrapper.contains(welcome)).to.equal(true);</span>
+  <span class="kd">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">shallow</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;);</span>
+  <span class="kd">const</span> <span class="nx">welcome</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome to React<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;;</span>
+  <span class="c1">// expect(wrapper.contains(welcome)).to.equal(true);</span>
   <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">welcome</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
