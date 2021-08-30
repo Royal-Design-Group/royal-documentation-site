@@ -2,13 +2,12 @@
 <p>Is a very simple bash script that pings all the production enviroment swap slots.
 Essentially you run it when your are deploying something new to production the build has been completed and azure devops is ready to swap slots.</p>
 
-<p>This script checks the pre-production enviroment
-<code>shell
-❯ ./verify-all-deploys.sh
-Which site group do you want to test?
-         1) Royaldesign
-         2) Rum21
-         3) Both
-         4) Exit                ...
-</code>
-Where you select 1, 2 or 3</p>
+<p>This script checks the pre-production enviroment</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>❯ ./verify-all-deploys.sh
+Which site group <span class="k">do </span>you want to <span class="nb">test</span>?
+         1<span class="o">)</span> Royaldesign
+         2<span class="o">)</span> Rum21
+         3<span class="o">)</span> Both
+         4<span class="o">)</span> Exit                
+         <span class="c"># Where you select 1, 2 or 3</span>
+</code></pre></div>

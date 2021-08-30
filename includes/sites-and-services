@@ -3,9 +3,11 @@
 is a simple status site that pings all domains and major services to show if they are up or not</p>
 <h2 id='prismic'>prismic</h2>
 <p><a href="https://prismic.io/dashboard">Prismic</a>
-The headless cms used in both royal design and rum21
-<a href="https://royaldesign.prismic.io/">prismic Royal design</a>
-<a href="https://rum21.prismic.io/">prismic Rum21</a></p>
+The headless cms used in both royal design and rum21</p>
+
+<p><a href="https://royaldesign.prismic.io/">prismic Royal design</a></p>
+
+<p><a href="https://rum21.prismic.io/">prismic Rum21</a></p>
 <h2 id='azure-devops'>Azure devops</h2>
 <p><a href="https://dev.azure.com/projectgreenfield/">Az devops</a>
 Is where the building and deployment of the royal web projects are handled</p>

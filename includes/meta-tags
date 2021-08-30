@@ -1,14 +1,15 @@
 <h1 id='meta-tags'>Meta tags</h1><h2 id='head'>Head</h2><h3 id='tags'>Tags</h3>
 <p>Site verification tags such as 
-with the syntax <code>&lt;meta name=&quot;X-domain-verification&quot; content=&quot;some-string-123&quot; /&gt;</code>
-with different identifiers for each domain lives in:</p>
-
-<p><a href="https://prismic.io/dashboard">Prismic</a> &gt; 
-        (Section type:) Document &gt; 
-             (Document name:) Config or Configuration &gt; 
-                    (Subsection name:) SEO &gt; 
-                        (Slice tab name) Meta tags</p>
-
+with the syntax </p>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"X-domain-verification"</span> <span class="na">content=</span><span class="s">"some-string-123"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>with different identifiers for each domain lives in prismic:</p>
+<div class="highlight"><pre class="highlight awk tab-awk"><code><span class="nx">Prismic</span> <span class="o">=</span> <span class="nx">royaldesign</span> <span class="nx">cms</span> <span class="o">||</span> <span class="nx">rum21</span> <span class="nx">cms</span>
+ <span class="o">-&gt;</span> <span class="nx">Section</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">Document</span> 
+    <span class="o">-&gt;</span> <span class="nx">Document</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">Config</span> <span class="o">||</span> <span class="nx">Configuration</span> 
+        <span class="o">-&gt;</span> <span class="nx">Subsection</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">SEO</span>
+            <span class="o">-&gt;</span> <span class="nx">Slice</span> <span class="p">(</span><span class="nx">tab</span> <span class="nx">name</span><span class="p">)</span> <span class="o">=</span> <span class="nx">Meta</span> <span class="nx">tags</span>
+</code></pre></div>
 <p>exeception from above is when a tag is to be implemented on the domain <link>https://Royaldesign.com</link> which is hardcoded in the project <code>royal-web</code> and then the file:
 <code>royal-web/packages/royaldesign/public/countries.html</code></p>
 <h2 id='google-tag-mananger-gtm'>Google tag mananger - GTM</h2>
