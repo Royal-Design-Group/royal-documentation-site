@@ -12,6 +12,7 @@ set :markdown,
     tables: true,
     with_toc_data: true,
     no_intra_emphasis: true,
+    space_after_headers: true,
     renderer: UniqueHeadCounter
 
 # Assets
@@ -52,7 +53,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :cache_buster
-  # activate :gzip
+  activate :gzip
 end
 
 # Deploy Configuration

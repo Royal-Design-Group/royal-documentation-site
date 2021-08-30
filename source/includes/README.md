@@ -2,9 +2,10 @@
 
 This package contains the main code for the Royal Design website/React app. It is based on [Create React App](https://github.com/facebookincubator/create-react-app) but is using a custom fork of the `react-scripts` package, found in this monorepo.
 
-## projects
-[Github](https://github.com/Royal-Design-Group/royal-web)
-[Bitbucket](https://bitbucket.org/grebban/royal-web/src/develop/)
+## Project code
+[Royal design group on Github](https://github.com/Royal-Design-Group)
+
+[Royal web project on Bitbucket](https://bitbucket.org/grebban/royal-web/src/develop/)
 ## Setup
 
 Make sure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
@@ -68,20 +69,24 @@ So add any new strings to the sheet for the application and ping Isabelle Blanc 
 When adding a new site there are some steps that you need to go through:
 
 - If you are adding a new currency. Add the format to src/constants/format.js
+
 - Configure routing in src/lib/routing/config.js
+
 - Add locale to src/config.json
+
 - Create a translated locale file (preferably based on sv-SE if possible) and add it to translations/{new_locale}.json
+
 - Create new env files in the env folder in the root
 
 ## CI/CD
 
-There are currently some basic build and release pipelines for the royal-web repository. So whenever you push to a release branch a build based on the file Dockerfile-VSTS will be triggered, if the build is successful it will be automatically deployed to the staging environment which consists of these sites:
+There are currently some basic build and release pipelines for the royal-web repository. So whenever you push to a release branch a build based on the file Dockerfile-VSTS will be triggered, if the build is successful it will be automatically deployed to the staging environment which consists of these sites
 
-https://royalweb-no-stage.azurewebsites.net
-https://royalweb-se-stage.azurewebsites.net
+- https://royalweb-no-stage.azurewebsites.net
+- https://royalweb-se-stage.azurewebsites.net
 
 and for the rest of all royaldesign and rum21 domains with the
-https://royalweb-"LOCALE"-stage.azurewebsites.net - LOCALE being the only change
+`https://royalweb-"LOCALE"-stage.azurewebsites.net` - `LOCALE` being the only change depending on the domain you wish to test
 
 As a safety precaution deploying the release to the live environment is done by manually approving a release (just a click in VSTS given that you have the correct credentials). And they will end up on these URLs:
 ### royaldesign
@@ -499,6 +504,7 @@ render() {
   return <img src={process.env.PUBLIC_URL + '/img/logo.png'} />
   }
 ```
+> [Adding images and fonts](#adding-images-fonts-and-files).
 
 Keep in mind the downsides of this approach:
 
@@ -530,11 +536,12 @@ const $ = window.$;
 
 This makes it obvious you are using a global variable intentionally rather than because of a typo.
 
-Alternatively, you can force the linter to ignore any line by adding `// eslint-disable-line` after it.
+Alternatively, you can force the linter to ignore any line by adding
+`// eslint-disable-line` after it.
 
 ## Using HTTPS in Development
 
-> Note: this feature is available with `react-scripts@0.4.0` and higher.
+* Note: this feature is available with `react-scripts@0.4.0` and higher.
 
 
 You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using [the "proxy" feature](#proxying-api-requests-in-development) to proxy requests to an API server when that API server is itself serving HTTPS.
@@ -544,7 +551,7 @@ To do this, set the `HTTPS` environment variable to `true`, then start the dev s
 #### Windows (cmd.exe)
 
 ```shell
-set HTTPS=true&&npm start
+$ set HTTPS=true&&npm start
 ```
 
 (Note: the lack of whitespace is intentional.)
@@ -552,7 +559,7 @@ set HTTPS=true&&npm start
 #### Linux, macOS (Bash)
 
 ```shell
-HTTPS=true npm start
+$ HTTPS=true npm start
 ```
 
 Note that the server will use a self-signed certificate, so your web browser will almost definitely display a warning upon accessing the page.
@@ -623,7 +630,7 @@ There is a broad spectrum of component testing techniques. They range from a “
 
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
-```javascript
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -641,13 +648,13 @@ When you encounter bugs caused by changing components, you will gain a deeper in
 If you’d like to test components in isolation from the child components they render, we recommend using [`shallow()` rendering API](http://airbnb.io/enzyme/docs/api/shallow.html) from [Enzyme](http://airbnb.io/enzyme/). To install it, run:
 
 ```shell
-npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
+$ npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
 ```
 
 Alternatively you may use `yarn`:
 
-```shell
-yarn add enzyme enzyme-adapter-react-16 react-test-renderer
+```zsh
+$ yarn add enzyme enzyme-adapter-react-16 react-test-renderer
 ```
 
 As of Enzyme 3, you will need to install Enzyme along with an Adapter corresponding to the version of React you are using. (The examples above use the adapter for React 16.)
@@ -656,7 +663,7 @@ The adapter will also need to be configured in your [global setup file](#initial
 
 #### `src/setupTests.js`
 
-```javascript
+```jsx
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -665,7 +672,7 @@ configure({ adapter: new Adapter() });
 
 Now you can write a smoke test with it:
 
-```javascript
+```jsx
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
@@ -681,7 +688,7 @@ You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testi
 
 Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
 
-```javascript
+```jsx
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
