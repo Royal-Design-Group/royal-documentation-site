@@ -23,6 +23,14 @@ under the License.
 ////////////////////////////////////////////////////////////////////////////////
 // GENERAL STUFF
 ////////////////////////////////////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');html {
+font-family: 'JetBrains Mono', monospace;
+  font-style: monospace;
+  font-weight: 100;
+  font-display: swap; 
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab");html {
   font-family: 'Roboto Slab';
   font-style: normal;
