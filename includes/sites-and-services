@@ -1,0 +1,14 @@
+<h1 id='various-sites-and-services-related-to-royalweb'>Various sites and services related to RoyalWeb</h1><h2 id='royal-health'>royal health</h2>
+<p><a href="http://royal-status.westeurope.azurecontainer.io/">Royal status</a>
+is a simple status site that pings all domains and major services to show if they are up or not</p>
+<h2 id='prismic'>prismic</h2>
+<p><a href="https://prismic.io/dashboard">Prismic</a>
+The headless cms used in both royal design and rum21
+<a href="https://royaldesign.prismic.io/">prismic Royal design</a>
+<a href="https://rum21.prismic.io/">prismic Rum21</a></p>
+<h2 id='azure-devops'>Azure devops</h2>
+<p><a href="https://dev.azure.com/projectgreenfield/">Az devops</a>
+Is where the building and deployment of the royal web projects are handled</p>
+<h2 id='azure'>Azure</h2>
+<p><a href="https://portal.azure.com/#home">Azure Portal</a>
+The choosen cloud solution</p>

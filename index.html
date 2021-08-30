@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <link href="images/favicon-ef46b48e.ico?1630299608" rel="icon" type="image/ico" />
+    <link href="images/favicon-ef46b48e.ico?1630301811" rel="icon" type="image/ico" />
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -282,36 +282,31 @@
 }
     </style>
 
-    <link href="stylesheets/screen-cf3c9a2c.css?1630299608" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-1ffadffb.css?1630299608" rel="stylesheet" media="print" />
-      <script src="javascripts/all-b12a2749.js?1630299608"></script>
+    <link href="stylesheets/screen-b1ffe020.css?1630301811" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bcc98152.css?1630301811" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js?1630301811"></script>
 
     <script>
       $(function() { setupCodeCopy(); });
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;,&quot;html&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar-cad8cdcb.png?1630299608" alt="" />
+        <img src="images/navbar-cad8cdcb.png?1630301811" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-c9cd7623.png?1630299608" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-              <a href="#" data-language-name="html">html</a>
-        </div>
+      <img src="images/logo-c9cd7623.png?1630301811" class="logo" alt="" />
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#royal-web" class="toc-h1 toc-link" data-title="Royal web">Royal web</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#projects" class="toc-h2 toc-link" data-title="projects">projects</a>
@@ -404,6 +399,23 @@
             <a href="#verify-deploys" class="toc-h1 toc-link" data-title="Verify deploys">Verify deploys</a>
           </li>
           <li>
+            <a href="#various-sites-and-services-related-to-royalweb" class="toc-h1 toc-link" data-title="Various sites and services related to RoyalWeb">Various sites and services related to RoyalWeb</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#royal-health" class="toc-h2 toc-link" data-title="royal health">royal health</a>
+                  </li>
+                  <li>
+                    <a href="#prismic" class="toc-h2 toc-link" data-title="prismic">prismic</a>
+                  </li>
+                  <li>
+                    <a href="#azure-devops" class="toc-h2 toc-link" data-title="Azure devops">Azure devops</a>
+                  </li>
+                  <li>
+                    <a href="#azure" class="toc-h2 toc-link" data-title="Azure">Azure</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#documentation-in-swedish" class="toc-h1 toc-link" data-title="Documentation in swedish">Documentation in swedish</a>
           </li>
           <li>
@@ -414,12 +426,8 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='https://github.com/2lach'These docs where</a></li>
             <li><a href='https://github.com/2lach'>Created by Stefan</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
@@ -427,7 +435,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='royal-web'>Royal web</h1>
+        <h1 id='introduction'>Introduction</h1>
 <p>This package contains the main code for the Royal Design website/React app. It is based on <a href="https://github.com/facebookincubator/create-react-app">Create React App</a> but is using a custom fork of the <code>react-scripts</code> package, found in this monorepo.</p>
 <h2 id='projects'>projects</h2>
 <p><a href="https://github.com/Royal-Design-Group/royal-web">Github</a>
@@ -657,10 +665,6 @@ Your app is ready to be deployed!</p>
 <p>Runs lint on all translations specified in <code>translations.locales</code> of <code>config.json</code> and shows any errors or warnings.</p>
 <h3 id='yarn-run'><code>yarn run</code></h3>
 <p>will give you an overview of the available commands.</p>
-
-<blockquote>
-<p>Which command would you like to run?</p>
-</blockquote>
 <h2 id='styling'>Styling</h2>
 <p>This project includes some packages to assist with styling components.</p>
 <h3 id='css-in-js'>CSS-in-JS</h3>
@@ -1110,18 +1114,69 @@ npm run analyze
 </code></pre></div><h2 id='advanced-configuration'>Advanced Configuration</h2>
 <p>You can adjust various development and production settings by setting environment variables in your shell or with <a href="#adding-development-environment-variables-in-env">.env</a>.</p>
 
-<p>| Variable            |      Development       |     Production     | Usage
-| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.|</p>
-
-<p>| HOST                |   :white_check_mark:   |        :x:         | By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| PORT                |   :white_check_mark:   |        :x:         | By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| HTTPS               |   :white_check_mark:   |        :x:         | When set to <code>true</code>, Create React App will run the development server in <code>https</code> mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| PUBLIC_URL          |          :x:           | :white_check_mark: | Create React App assumes your application is hosted at the serving web server&#39;s root or a subpath as specified in <a href="#building-for-relative-paths"><code>package.json</code> (<code>homepage</code>)</a>. Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.                                                                                                                                                                                                |
-| CI                  | :large_orange_diamond: | :white_check_mark: | When set to <code>true</code>, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| REACT_EDITOR        |   :white_check_mark:   |        :x:         | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder. |</p>
-
-<p>| CHOKIDAR_USEPOLLING |   :white_check_mark:   |        :x:         | When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines. |</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Variable</th>
+<th style="text-align: center">Development</th>
+<th style="text-align: center">Production</th>
+<th style="text-align: left">Usage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">BROWSER</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.</td>
+</tr>
+<tr>
+<td style="text-align: left">HOST</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.</td>
+</tr>
+<tr>
+<td style="text-align: left">PORT</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.</td>
+</tr>
+<tr>
+<td style="text-align: left">HTTPS</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When set to <code>true</code>, Create React App will run the development server in <code>https</code> mode.</td>
+</tr>
+<tr>
+<td style="text-align: left">PUBLIC_URL</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">Create React App assumes your application is hosted at the serving web server&#39;s root or a subpath as specified in <a href="#building-for-relative-paths"><code>package.json</code> (<code>homepage</code>)</a>. Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.</td>
+</tr>
+<tr>
+<td style="text-align: left">CI</td>
+<td style="text-align: center">:large_orange_diamond:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">When set to <code>true</code>, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.</td>
+</tr>
+<tr>
+<td style="text-align: left">REACT_EDITOR</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder.</td>
+</tr>
+<tr>
+<td style="text-align: left">CHOKIDAR_USEPOLLING</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.</td>
+</tr>
+<tr>
+<td style="text-align: left">GENERATE_SOURCEMAP</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines.</td>
+</tr>
+</tbody></table>
 <h2 id='troubleshooting'>Troubleshooting</h2><h3 id='npm-start-doesn-t-detect-changes'><code>npm start</code> doesn’t detect changes</h3>
 <p>When you save a file while <code>npm start</code> is running, the browser should refresh with the updated code.<br>
 If this doesn’t happen, try one of the following workarounds:</p>
@@ -1256,6 +1311,20 @@ Which site group do you want to test?
          4) Exit                ...
 </code>
 Where you select 1, 2 or 3</p>
+<h1 id='various-sites-and-services-related-to-royalweb'>Various sites and services related to RoyalWeb</h1><h2 id='royal-health'>royal health</h2>
+<p><a href="http://royal-status.westeurope.azurecontainer.io/">Royal status</a>
+is a simple status site that pings all domains and major services to show if they are up or not</p>
+<h2 id='prismic'>prismic</h2>
+<p><a href="https://prismic.io/dashboard">Prismic</a>
+The headless cms used in both royal design and rum21
+<a href="https://royaldesign.prismic.io/">prismic Royal design</a>
+<a href="https://rum21.prismic.io/">prismic Rum21</a></p>
+<h2 id='azure-devops'>Azure devops</h2>
+<p><a href="https://dev.azure.com/projectgreenfield/">Az devops</a>
+Is where the building and deployment of the royal web projects are handled</p>
+<h2 id='azure'>Azure</h2>
+<p><a href="https://portal.azure.com/#home">Azure Portal</a>
+The choosen cloud solution</p>
 <h1 id='documentation-in-swedish'>Documentation in swedish</h1><h1 id='collector'>Collector</h1><h2 id='i-stage-miljoer'>I stage miljöer</h2>
 <p>Postnummer:  53431
 Collector:</p>
@@ -1278,72 +1347,9 @@ utgångsdatum       12/22
 Verifieringskod     150</p>
 
 <p>Det borde dyka upp en triangel med utropstecken på höger sidan av kortnummer som informerar om att detta är ett testköp </p>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-                <a href="#" data-language-name="html">html</a>
-          </div>
       </div>
     </div>
   </body>

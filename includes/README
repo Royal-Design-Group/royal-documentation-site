@@ -1,4 +1,4 @@
-<h1 id='royal-web'>Royal web</h1>
+<h1 id='introduction'>Introduction</h1>
 <p>This package contains the main code for the Royal Design website/React app. It is based on <a href="https://github.com/facebookincubator/create-react-app">Create React App</a> but is using a custom fork of the <code>react-scripts</code> package, found in this monorepo.</p>
 <h2 id='projects'>projects</h2>
 <p><a href="https://github.com/Royal-Design-Group/royal-web">Github</a>
@@ -228,10 +228,6 @@ Your app is ready to be deployed!</p>
 <p>Runs lint on all translations specified in <code>translations.locales</code> of <code>config.json</code> and shows any errors or warnings.</p>
 <h3 id='yarn-run'><code>yarn run</code></h3>
 <p>will give you an overview of the available commands.</p>
-
-<blockquote>
-<p>Which command would you like to run?</p>
-</blockquote>
 <h2 id='styling'>Styling</h2>
 <p>This project includes some packages to assist with styling components.</p>
 <h3 id='css-in-js'>CSS-in-JS</h3>
@@ -681,18 +677,69 @@ npm run analyze
 </code></pre></div><h2 id='advanced-configuration'>Advanced Configuration</h2>
 <p>You can adjust various development and production settings by setting environment variables in your shell or with <a href="#adding-development-environment-variables-in-env">.env</a>.</p>
 
-<p>| Variable            |      Development       |     Production     | Usage
-| BROWSER             |   :white_check_mark:   |        :x:         | By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.|</p>
-
-<p>| HOST                |   :white_check_mark:   |        :x:         | By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| PORT                |   :white_check_mark:   |        :x:         | By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| HTTPS               |   :white_check_mark:   |        :x:         | When set to <code>true</code>, Create React App will run the development server in <code>https</code> mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| PUBLIC_URL          |          :x:           | :white_check_mark: | Create React App assumes your application is hosted at the serving web server&#39;s root or a subpath as specified in <a href="#building-for-relative-paths"><code>package.json</code> (<code>homepage</code>)</a>. Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.                                                                                                                                                                                                |
-| CI                  | :large_orange_diamond: | :white_check_mark: | When set to <code>true</code>, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| REACT_EDITOR        |   :white_check_mark:   |        :x:         | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder. |</p>
-
-<p>| CHOKIDAR_USEPOLLING |   :white_check_mark:   |        :x:         | When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| GENERATE_SOURCEMAP  |          :x:           | :white_check_mark: | When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines. |</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Variable</th>
+<th style="text-align: center">Development</th>
+<th style="text-align: center">Production</th>
+<th style="text-align: left">Usage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">BROWSER</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, Create React App will open the default system browser, favoring Chrome on macOS. Specify a <a href="https://github.com/sindresorhus/opn#app">browser</a> to override this behavior, or set it to <code>none</code> to disable it completely. If you need to customize the way the browser is launched, you can specify a node script instead. Any arguments passed to <code>npm start</code> will also be passed to this script, and the url where your app is served will be the last argument. Your script&#39;s file name must have the <code>.js</code> extension.</td>
+</tr>
+<tr>
+<td style="text-align: left">HOST</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, the development web server binds to <code>localhost</code>. You may use this variable to specify a different host.</td>
+</tr>
+<tr>
+<td style="text-align: left">PORT</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">By default, the development web server will attempt to listen on port 3000 or prompt you to attempt the next available port. You may use this variable to specify a different port.</td>
+</tr>
+<tr>
+<td style="text-align: left">HTTPS</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When set to <code>true</code>, Create React App will run the development server in <code>https</code> mode.</td>
+</tr>
+<tr>
+<td style="text-align: left">PUBLIC_URL</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">Create React App assumes your application is hosted at the serving web server&#39;s root or a subpath as specified in <a href="#building-for-relative-paths"><code>package.json</code> (<code>homepage</code>)</a>. Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.</td>
+</tr>
+<tr>
+<td style="text-align: left">CI</td>
+<td style="text-align: center">:large_orange_diamond:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">When set to <code>true</code>, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.</td>
+</tr>
+<tr>
+<td style="text-align: left">REACT_EDITOR</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can <a href="https://github.com/facebookincubator/create-react-app/issues/2636">send a pull request to detect your editor of choice</a>. Setting this environment variable overrides the automatic detection. If you do it, make sure your systems <a href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> environment variable points to your editor’s bin folder.</td>
+</tr>
+<tr>
+<td style="text-align: left">CHOKIDAR_USEPOLLING</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: left">When set to <code>true</code>, the watcher runs in polling mode, as necessary inside a VM. Use this option if <code>npm start</code> isn&#39;t detecting changes.</td>
+</tr>
+<tr>
+<td style="text-align: left">GENERATE_SOURCEMAP</td>
+<td style="text-align: center">:x:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: left">When set to <code>false</code>, source maps are not generated for a production build. This solves OOM issues on some smaller machines.</td>
+</tr>
+</tbody></table>
 <h2 id='troubleshooting'>Troubleshooting</h2><h3 id='npm-start-doesn-t-detect-changes'><code>npm start</code> doesn’t detect changes</h3>
 <p>When you save a file while <code>npm start</code> is running, the browser should refresh with the updated code.<br>
 If this doesn’t happen, try one of the following workarounds:</p>
