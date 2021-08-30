@@ -9,7 +9,9 @@ is a simple status site that pings all domains and major services to show if the
 
 [Prismic](https://prismic.io/dashboard)
 The headless cms used in both royal design and rum21
+
 [prismic Royal design](https://royaldesign.prismic.io/)
+
 [prismic Rum21](https://rum21.prismic.io/)
 
 ## Azure devops

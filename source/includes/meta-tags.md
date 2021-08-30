@@ -2,15 +2,21 @@
 ## Head
 ### Tags
 Site verification tags such as 
-with the syntax `<meta name="X-domain-verification" content="some-string-123" />`
-with different identifiers for each domain lives in:
+with the syntax 
 
-[Prismic](https://prismic.io/dashboard) > 
-		(Section type:) Document > 
-			 (Document name:) Config or Configuration > 
-					(Subsection name:) SEO > 
-						(Slice tab name) Meta tags
+```html
+<meta name="X-domain-verification" content="some-string-123" />
+```
 
+with different identifiers for each domain lives in prismic:
+
+```awk
+Prismic = royaldesign cms || rum21 cms
+ -> Section type = Document 
+ 	-> Document name = Config || Configuration 
+ 		-> Subsection name = SEO
+ 			-> Slice (tab name) = Meta tags
+```
 exeception from above is when a tag is to be implemented on the domain <link>https://Royaldesign.com</link> which is hardcoded in the project `royal-web` and then the file:
 `royal-web/packages/royaldesign/public/countries.html`
 
