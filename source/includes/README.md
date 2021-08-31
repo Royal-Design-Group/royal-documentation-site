@@ -62,8 +62,6 @@ To get them translated we use a Google Drive document to communicate translation
 
 So add any new strings to the sheet for the application and ping Isabelle Blanc in the Royal Design Slack about the fact that we need translations.
 
-[Link to the google spreadsheets](https://docs.google.com/spreadsheets/d/1XjzXfH6_d8k9AXVua-9GpHpwDxtzk6Mah8r7Zb5tjAY/)
-
 ## Adding a new site
 
 When adding a new site there are some steps that you need to go through:

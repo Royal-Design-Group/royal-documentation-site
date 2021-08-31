@@ -16,9 +16,11 @@ includes:
   - meta-tags.md
   - verify-deploys.md
   - sites-and-services.md
-  #- image360-Component.md -> needs to be fixed up 
   - doc-in-swedish.md
-  - collector-test-data.md
+  - collector-test-data.md 
+  # <--- HÄR
+
+  #- image360-Component.md -> needs to be fixed up 
   # - _errors.md
 
 
