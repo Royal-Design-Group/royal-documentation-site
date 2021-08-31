@@ -33,8 +33,6 @@
 <p>To get them translated we use a Google Drive document to communicate translations with Royal Design. We input the id (the key generated to JSON file, like ange_rabattkod_fa2f75f7) and the swedish string and they will make sure that their resources for translations will fill the rest of the columns. We then manually just add the translations to the other locale files after we have received the translations. If you have a large amount of strings there is an old script somewhere that Niclas Vänström can dig up.</p>
 
 <p>So add any new strings to the sheet for the application and ping Isabelle Blanc in the Royal Design Slack about the fact that we need translations.</p>
-
-<p><a href="https://docs.google.com/spreadsheets/d/1XjzXfH6_d8k9AXVua-9GpHpwDxtzk6Mah8r7Zb5tjAY/">Link to the google spreadsheets</a></p>
 <h2 id='adding-a-new-site'>Adding a new site</h2>
 <p>When adding a new site there are some steps that you need to go through:</p>
 
