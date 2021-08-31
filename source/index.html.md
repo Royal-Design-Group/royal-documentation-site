@@ -18,6 +18,7 @@ includes:
   - sites-and-services.md
   - doc-in-swedish.md
   - collector-test-data.md 
+  - about-slate.md
   # <--- HÄR
 
   #- image360-Component.md -> needs to be fixed up 
