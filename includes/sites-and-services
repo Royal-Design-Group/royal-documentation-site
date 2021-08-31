@@ -1,7 +1,4 @@
-<h1 id='various-sites-and-services-related-to-royalweb'>Various sites and services related to RoyalWeb</h1><h2 id='royal-health'>royal health</h2>
-<p><a href="http://royal-status.westeurope.azurecontainer.io/">Royal status</a>
-is a simple status site that pings all domains and major services to show if they are up or not</p>
-<h2 id='prismic'>prismic</h2>
+<h1 id='various-sites-and-services-related-to-royalweb'>Various sites and services related to RoyalWeb</h1><h2 id='prismic'>prismic</h2>
 <p><a href="https://prismic.io/dashboard">Prismic</a>
 The headless cms used in both royal design and rum21</p>
 
@@ -14,3 +11,19 @@ Is where the building and deployment of the royal web projects are handled</p>
 <h2 id='azure'>Azure</h2>
 <p><a href="https://portal.azure.com/#home">Azure Portal</a>
 The choosen cloud solution</p>
+<h2 id='royal-health'>Royal health</h2>
+<p><a href="http://royal-status.westeurope.azurecontainer.io/">Royal status</a>
+is a simple status site that pings all domains and major services to show if they are up or not</p>
+<h2 id='royal-dev-deploys'>Royal Dev - Deploys</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/1xe8N8bP965hqiOH5uwHrTEt9jd3iMZgXEYtqOEVnZPw/edit#gid=0">Royal Dev - Deploys</a>
+A google spreadsheet that informs who deployed what app and branch on which development enviroments and enviroments which are available</p>
+<h2 id='jira'>Jira</h2>
+<p><a href="https://royaldesign.atlassian.net/">Jira</a></p>
+<h2 id='codebase'>Codebase</h2>
+<p>you can find the projects code here
+currently the bitbucket repository is the primary
+<a href="https://bitbucket.org/grebban/royal-web/">Royal web project on Bitbucket</a></p>
+
+<p>But since github is a better provider the goal is to switch to it 
+at this time the swap is in progress but not completed
+<a href="https://github.com/Royal-Design-Group">Royal design group on Github</a></p>
