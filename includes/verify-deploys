@@ -3,6 +3,11 @@
 Essentially you run it when your are deploying something new to production the build has been completed and azure devops is ready to swap slots.</p>
 
 <p>This script checks the pre-production enviroment</p>
+
+<p>You can get the script here:
+<a href="https://github.com/Royal-Design-Group/royal-scripts/tree/master/Local/verify-deploys">royal scripts repository</a></p>
+
+<p>then you run the script when your production release is done in the phase &quot;stage&quot; but has not yet been approved for release to production deployment.</p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>❯ ./verify-all-deploys.sh
 Which site group <span class="k">do </span>you want to <span class="nb">test</span>?
          1<span class="o">)</span> Royaldesign
