@@ -5,6 +5,11 @@ Essentially you run it when your are deploying something new to production the b
 
 This script checks the pre-production enviroment
 
+You can get the script here:
+[royal scripts repository](https://github.com/Royal-Design-Group/royal-scripts/tree/master/Local/verify-deploys)
+
+then you run the script when your production release is done in the phase "stage" but has not yet been approved for release to production deployment.
+
 ```shell
 ❯ ./verify-all-deploys.sh
 Which site group do you want to test?
